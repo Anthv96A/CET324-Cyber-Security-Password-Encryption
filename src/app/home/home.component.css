@@ -1,0 +1,19 @@
+
+.dropdown {
+	float: left;
+	width:160px;
+	margin-right: auto;
+}
+
+.Assessment_Container {
+	margin-top: 10px;
+}
+
+#assessmentImage {
+	margin-top: 10px;
+    max-height: 156px;
+}
+
+.btn-default{
+	margin-top:5px;
+}

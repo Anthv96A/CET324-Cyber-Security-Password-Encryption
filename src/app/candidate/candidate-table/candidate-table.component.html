@@ -1,0 +1,89 @@
+<!--<label for="date">Search by date</label> 
+<input type="date">
+    <hr>
+      <div class="table-responsive">
+            <table class="table table-striped" style="border: 1px solid #ddd">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>University</th>
+                    <th>Degree</th>
+                    <th>Date</th>
+                    <th>Group</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let candidate of candidates;">
+                    <td>{{candidate.name}}</td>
+                    <td>{{candidate.university}}</td>
+                    <td>{{candidate.degree}}</td>
+                    <td>{{candidate.assessmentDate | date:'dd/MM/yyyy'}}</td>
+                    <td>{{candidate.assessmentGroup}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+  -->
+<!--<div style="margin: auto; max-width: 600px;">
+  <data-table [items]="candidates" [itemCount]="candidateCount" [pagination]="false" [indexColumn]="false" [selectColumn]="true" [multiSelect]="true">
+
+    <data-table-column property="name" header="Name" sortable="true"></data-table-column>
+
+    <data-table-column property="university" header="University"></data-table-column>
+
+    <data-table-column property="degree" header="Degree"> </data-table-column>
+
+    <data-table-column property="assessmentDate" header="Date"> </data-table-column>
+
+    <data-table-column property="assessmentGroup" header="Group"> </data-table-column>
+
+    <data-table-column header="Actions">
+     <ng-template #dataTableHeader let-item="item"> 
+          <i>Actions</i>
+     </ng-template>
+      <ng-template #dataTableCell let-item="item">
+        <button (click)="carClicked(item)" class="btn btn-sm btn-default">Buy</button>
+      </ng-template>
+    </data-table-column>
+
+
+  </data-table>
+
+    <div>       
+        <b>Selected:</b> <span [textContent]="candidateTable.selectedRows.length"></span>
+    </div>
+
+</div>-->
+
+
+<div style="margin: auto; max-width: 1000px; margin-top:50px">
+    <data-table id="films-grid" headerTitle="Candidates" [items]="candidates" [itemCount]="candidateCount" (reload)="reloadCandidates($event)" [limit]="10" [sortBy]="'name'" [sortAsc]="false"
+        [selectColumn]="true"
+        [multiSelect]="false"
+        [substituteRows]="false"
+        [expandableRows]="true"
+        [indexColumnHeader]="'#'"
+        [selectOnRowClick]="true"
+    >
+
+        <ng-template #dataTableExpand let-item="item">
+            <div [textContent]="item.name" style="padding: 5px; color: gray"></div>
+        </ng-template>
+
+        <data-table-column [property]="'name'" [header]="'Name'" [sortable]="true"></data-table-column>
+
+        <data-table-column [property]="'university'" [header]="'University'" [sortable]="true"></data-table-column>
+
+        <data-table-column [property]="'degree'" [header]="'Degree'" [sortable]="true"></data-table-column>
+
+        <data-table-column [property]="'assessmentDate'" [header]="'Date'" [sortable]="true"></data-table-column>
+
+        <data-table-column [property]="'assessmentGroup'" [header]="'Group'"></data-table-column>
+
+    </data-table>
+    <div style="margin-top: 10px">
+        <b>Selected:</b>
+        <span *ngIf="candidateTable.selectedRow == null"><i>No item selected</i></span>
+        <span [textContent]="candidateTable.selectedRow && candidateTable.selectedRow.item.name"></span>
+    </div>
+</div>

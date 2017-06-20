@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Candidate } from '../candidate.model';
 import { CandidateService } from '../candidate.service'
+import { Observable } from 'rxjs/Observable';
 // import { DataTable, DataTableResource, DataTableTranslations } from 'angular-2-data-table';
 
 @Component({
@@ -10,27 +11,51 @@ import { CandidateService } from '../candidate.service'
 })
 export class CandidateTableComponent {
 
-    // constructor(private candidateService: CandidateService) {
-    //    this.candidates = this.candidateService.getCandidates();
-    //    this.candidateResource.count().then(count => this.candidateCount = count);
-    // }
 
-    // candidateResource = new DataTableResource(this.candidateService.getCandidates());
-    // candidates: Candidate[] = [];
-    // candidateCount: number = 0;
+     public columns: Array<any>;
+     public data: Array<any>;
+     public tableOptions: {
 
-    // @ViewChild(DataTable) candidateTable: DataTable;
- 
-    // reloadCandidates(params) {
-    //     this.candidateResource.query(params).then(candidates => this.candidates = candidates);
-    // }
+     };
 
-    // translations = <DataTableTranslations>{
-    //      indexColumn: 'Index column',
-    //      expandColumn: 'Expand column',
-    //      selectColumn: 'Select column',
-    //      paginationLimit: 'Max results',
-    //      paginationRange: 'Result range'
-    //   };
+    constructor(private candidateService: CandidateService) {
+        this.candidateTable();
+    }
+    
+    private candidateTable() {
+        this.columns = [
+            {
+                field: 'name',
+                title: 'Name'
+            },
+            {
+                field: 'university',
+                title: 'University',
+                sort: 'asc'
+            },
+            {
+                field: 'degree',
+                title: 'Degree',
+                sort: 'desc'
+            },
+            {
+                field: 'assessmentDate',
+                title: 'Assessment Date',
+                format: 'dd/MM/yyyy',
+            },
+            {
+                field: 'assessmentGroup',
+                title: 'Assessment Group',
+            },
+        ];
+        
+        this.data = this.candidateService.getCandidates();
+            
+        
+        
+        }
+        
+
+
 
 }

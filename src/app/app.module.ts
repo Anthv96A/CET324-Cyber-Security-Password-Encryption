@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DataTableModule } from 'angular-2-data-table';
+// import { DataTableModule } from 'angular-2-data-table';
+
+import { BsDropdownModule, PaginationModule } from 'ngx-bootstrap';
+import { NgxMagicTableModule } from '@magic-software/ngx-magic-table';
 
 import { mainRoutes } from './app.routing';
 import { CandidateService } from './candidate/candidate.service';
@@ -41,9 +45,13 @@ import { LoginformComponent } from './login/loginform/loginform.component';
   imports: [
     BrowserModule,
     FormsModule,
-    mainRoutes,
     NgbModule.forRoot(),
-    DataTableModule
+    BsDropdownModule.forRoot(),
+  	PaginationModule.forRoot(),
+    NgxMagicTableModule,
+    CommonModule,
+    mainRoutes
+    // DataTableModule
   ],
   providers: [CandidateService],
   bootstrap: [AppComponent]

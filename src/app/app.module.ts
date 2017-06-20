@@ -22,9 +22,8 @@ import { CandidateTableComponent } from './candidate/candidate-table/candidate-t
 import { CandidateCreationComponent } from './candidate/candidate-creation/candidate-creation.component';
 import { CandidateIntialComponent } from './candidate/candidate-intial.component';
 import { ResultsComponent } from './results/results.component';
-
-
-
+import { LoginComponent } from './login/login.component';
+import { LoginformComponent } from './login/loginform/loginform.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,10 @@ import { ResultsComponent } from './results/results.component';
     CandidateTableComponent,
     CandidateCreationComponent,
     CandidateIntialComponent,
-    ResultsComponent
+    ResultsComponent,
+    LoginComponent,
+    LoginformComponent
+    
   ],
   imports: [
     BrowserModule,

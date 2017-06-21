@@ -1,9 +1,13 @@
 #activeAssessmentsHeader {
     background-color: #5cb85c;
     color: white;
-    font-weight: bold;
+    font-family: NissanBrandBold;
 }
 
 #activeAssessmentBody {
     background-color: rgba(166, 216, 166, 0.3)
+}
+
+h3 {
+    font-family: NissanBrandBold;
 }

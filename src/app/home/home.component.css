@@ -17,3 +17,11 @@
 .btn-default{
 	margin-top:5px;
 }
+
+.container {
+	font-family: NissanBrandRegular;
+}
+
+h2 {
+	font-family: NissanBrandBold;
+}

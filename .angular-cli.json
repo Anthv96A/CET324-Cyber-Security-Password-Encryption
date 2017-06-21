@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/css/bootstrap.min.css"
+        "assets/css/bootstrap.min.css",
+        "assets/css/bootstrapIOSSlider.css"
       ],
       "scripts": [
         "assets/js/jquery.js",

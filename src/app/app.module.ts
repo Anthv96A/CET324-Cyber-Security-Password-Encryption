@@ -24,6 +24,8 @@ import { CandidateIntialComponent } from './candidate/candidate-intial.component
 import { ResultsComponent } from './results/results.component';
 import { LoginComponent } from './login/login.component';
 import { LoginformComponent } from './login/loginform/loginform.component';
+import { AssessmentSubmissionComponent } from './assessment-submission/assessment-submission.component';
+import { TeamAllocationComponent } from './team-allocation/team-allocation.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { LoginformComponent } from './login/loginform/loginform.component';
     CandidateIntialComponent,
     ResultsComponent,
     LoginComponent,
-    LoginformComponent
+    LoginformComponent,
+    AssessmentSubmissionComponent,
+    TeamAllocationComponent
     
   ],
   imports: [

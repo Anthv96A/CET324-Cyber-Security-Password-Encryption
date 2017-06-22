@@ -1,0 +1,24 @@
+.container {
+    font-family: NissanBrandRegular;
+}
+
+h2 {
+    font-family: NissanBrandBold;
+}
+
+#CandidateSelection {
+    margin-top: 20px;
+}
+
+#AddCandidate{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#RemoveCandidate{
+    width: 100%;
+}
+
+#SelectAGroup {
+    float: right;
+}

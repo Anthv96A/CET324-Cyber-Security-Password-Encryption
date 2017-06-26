@@ -1,45 +1,38 @@
-<div class="container">
-  <ol class="breadcrumb">
-      <li><a href="assessments.html">Home</a></li>
-      <li> Candidates</li>
-      <li class="active">Group Allocation</li>
-  </ol>
+<div class="container-fluid">
   <h2>Team Allocation</h2>
   <p>Allocate the Candidates into teams for the assessment day. </p>
   <hr>
   <div class="row">
-  
-  
-  <div class="form-group" class="col-md-5">
-    <label class="form-control-label" for="field_name">Date</label>
-    <input type="date" placeholder="Assessment Date" class="form-control" ngModel name="newDate" required #date="ngModel">
-    <span class="span-block" *ngIf ="!date.valid && date.touched">An assessment date is required</span>
-  </div> 
+    <div class="form-group" class="col-md-5">
+        <label class="form-control-label" for="field_name">Date</label>
+        <input type="date" placeholder="Assessment Date" class="form-control" ngModel name="newDate" required #date="ngModel">
+        <span class="span-block" *ngIf ="!date.valid && date.touched">An assessment date is required</span>
+    </div> 
 
-  <div class="form-group" class="col-md-5" id="SelectAGroup">
-    <label class="form-control-label" for="field_name">Group</label>
-    <select class="form-control" [ngModel]="groupDefault" name="newGroup" required #group="ngModel">
-        <option *ngFor ="let x of groupOptions">{{x}}</option>
-    </select>
-    <span class="span-block" *ngIf ="!group.valid && group.touched">An assessment group is required</span>
-  </div> 
-
+    <div class="form-group" class="col-md-5" id="SelectAGroup">
+        <label class="form-control-label" for="field_name">Group</label>
+        <select class="form-control" [ngModel]="groupDefault" name="newGroup" required #group="ngModel">
+            <option *ngFor ="let x of groupOptions">{{x}}</option>
+        </select>
+        <span class="span-block" *ngIf ="!group.valid && group.touched">An assessment group is required</span>
+    </div> 
   </div>
   <hr>
   <div clas="row" id="CandidateSelection">
-      <div class="col-sm-5 col-md-5"> 
-          <select id="selectableSpecSelectorOptions"  size="10" style="width: 100%" class="specSelectorSelect" name="optionSelected"></select>
-      </div>
-      <div class="col-sm-2 col-md-2"> 
-          <button id="AddCandidate" class="btn btn-success" href=""><span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></button>
-          <button id="RemoveCandidate" class="btn btn-danger" href=""><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-left"></span></button>
-      </div>
-      <div class="col-sm-5 col-md-5"> 
-          <select id="selectableSpecSelectorOptions"  size="10" style="width: 100%" class="specSelectorSelect" name="optionSelected"></select>
-      </div>
+    <div class="col-sm-5 col-md-5"> 
+        <select id="selectableSpecSelectorOptions"  size="10" style="width: 100%" class="specSelectorSelect" name="optionSelected"></select>
+    </div>
+    <div class="col-sm-2 col-md-2"> 
+        <button id="AddCandidate" class="btn btn-success" href=""><span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></button>
+        <button id="RemoveCandidate" class="btn btn-danger" href=""><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-left"></span></button>
+    </div>
+    <div class="col-sm-5 col-md-5"> 
+        <select id="selectableSpecSelectorOptions"  size="10" style="width: 100%" class="specSelectorSelect" name="optionSelected"></select>
+    </div>
   </div>
   <div class="row">
-      <div class="col-md-6" style="float:right;">
-          <button class="btn btn-success" type="button" data-toggle="modal" data-target=".bs-example-modal-lg" style="float:right;margin-top:10px;"><span class="glyphicon glyphicon-plus"></span> Create</button>
-      </div><!-- /.col-md-6 -->
+    <div class="col-md-6" style="float:right;">
+        <button class="btn btn-success" type="button" data-toggle="modal" data-target=".bs-example-modal-lg" style="float:right;margin-top:10px;"><span class="glyphicon glyphicon-plus"></span> Create</button>
+    </div><!-- /.col-md-6 -->
+    </div>
 </div>

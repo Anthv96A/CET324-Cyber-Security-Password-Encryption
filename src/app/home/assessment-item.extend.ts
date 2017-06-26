@@ -9,6 +9,7 @@ export class AssessmentItemProperties {
 
 
     toogleVisible(){
+        console.log(this.assessmentID);
         this.assessmentItem.enabled = !this.assessmentItem.enabled;
         this.eventVisible.emit({id: this.assessmentID, check: this.assessmentItem.enabled});
     }

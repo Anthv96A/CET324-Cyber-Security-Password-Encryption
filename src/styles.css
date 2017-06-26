@@ -1,3 +1,5 @@
+/* Font Faces
+-------------------------------------------------- */
 @font-face {
     font-family: NissanBrandBold;
     src: url(assets/NissanBrandBold.otf)
@@ -15,23 +17,24 @@
 
 html {
     min-width: 319px;
-    height: auto;
+    height: 100%;
 }
 
-body {
-	/*font-family: NissanBrandRegular;*/
-    width: 100%;    
-}
 
-.breadcrumb {
-    margin-top: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
+/* Page Container Styles
+-------------------------------------------------- */
+.container-fluid h1, .container-fluid h2, .container-fluid h3, .container-fluid h4, .container-fluid h5, .container-fluid h6 {
     font-family: NissanBrandBold;
 }
 
-@media only screen and (max-width: 320px) {
+.container-fluid {
+	font-family: NissanBrandRegular;
+}
+
+
+/* Media Queries
+-------------------------------------------------- */
+/*@media only screen and (max-width: 320px) {
     body {
         font-size: 9pt;
     }
@@ -65,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     h3 {
         font-size: 16pt;
     }
-}
+}*/
 
 
 

@@ -67,7 +67,7 @@ div .navbar-brand h3 {
     /* Set the fixed height of the footer here */
     height: 100px;
     color: white;
-    min-width: 1112px;
+
 }
 
 #slogan {
@@ -98,4 +98,10 @@ div .navbar-brand h3 {
     text-align: center;
     padding: 15px;
     text-decoration: none;
+}
+
+@media only screen and (max-width:1024px) {
+    #options li a {
+        padding: 10px;
+    }
 }

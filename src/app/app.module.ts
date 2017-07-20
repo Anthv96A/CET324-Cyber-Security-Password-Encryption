@@ -10,6 +10,7 @@ import { NgxMagicTableModule } from '@magic-software/ngx-magic-table';
 
 import { mainRoutes } from './app.routing';
 import { CandidateService } from './candidate/candidate.service';
+import { AssessmentService } from './home/assessment.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +25,11 @@ import { CandidateIntialComponent } from './candidate/candidate-intial.component
 import { ResultsComponent } from './results/results.component';
 import { LoginComponent } from './login/login.component';
 import { LoginformComponent } from './login/loginform/loginform.component';
+import { AssessmentSubmissionComponent } from './assessment-submission/assessment-submission.component';
+import { TeamAllocationComponent } from './team-allocation/team-allocation.component';
+import { AvailableItemComponent } from './home/available-assessments/available-item.component';
+import { AssessmentItemComponent } from './home/active-assessments/assessment-item.component';
+import { AssessmentScenarioComponent } from './assessment-scenario/assessment-scenario.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,12 @@ import { LoginformComponent } from './login/loginform/loginform.component';
     CandidateIntialComponent,
     ResultsComponent,
     LoginComponent,
-    LoginformComponent
+    LoginformComponent,
+    AssessmentSubmissionComponent,
+    TeamAllocationComponent,
+    AssessmentItemComponent,
+    AvailableItemComponent,
+    AssessmentScenarioComponent,
     
   ],
   imports: [
@@ -53,7 +64,10 @@ import { LoginformComponent } from './login/loginform/loginform.component';
     mainRoutes
     // DataTableModule
   ],
-  providers: [CandidateService],
+  providers: [
+    CandidateService,
+    AssessmentService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

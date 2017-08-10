@@ -8,7 +8,7 @@ import { Assessment } from'../assessment.model';
   templateUrl: './active-assessments.component.html',
   styleUrls: ['./active-assessments.component.css']
 })
-export class ActiveAssessmentsComponent extends AssessmentProperties  implements OnInit {
+export class ActiveAssessmentsComponent extends AssessmentProperties implements OnInit {
 
 
 

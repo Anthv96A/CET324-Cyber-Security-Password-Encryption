@@ -15,6 +15,8 @@ export class TasksComponent implements OnInit {
    selectedImageProperty: any;
    paramID: number;
    taskID : number;
+   questions: any[];
+   answers: any[];
 
 
   constructor(
@@ -30,7 +32,9 @@ export class TasksComponent implements OnInit {
       this.selectedImageProperty = undefined;
       this.chosenTask = this.assessmentService.findTask(params.id, params.taskid);
       this.chosenTask.answered = true;
-     console.log(this.chosenTask.questions) ;
+      if(this.chosenTask.type =="textbox"){
+        this.questions = this.chosenTask.questions;
+      }
     })
   }
 
@@ -41,6 +45,10 @@ export class TasksComponent implements OnInit {
   submitList(){
     let newArray = this.chosenTask.questions;
     console.log(newArray);
+  }
+
+  submitReason(data){
+     console.log(data);
   }
 
 

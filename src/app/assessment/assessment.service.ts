@@ -90,7 +90,8 @@ export class AssessmentService {
                         ],
                         
                         "type":"textbox",
-                        "answered": false
+                        "answered": false,
+                        
                         
                       }
 

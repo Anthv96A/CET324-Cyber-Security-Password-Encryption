@@ -1,0 +1,104 @@
+.selectedImage{
+    border: 3px solid red;
+} 
+
+
+
+/*** FOR COLLAPSIBLE PANELS ***/
+#Scenario_Header {
+    cursor:pointer;
+	background: #C3002F;
+	width: auto;
+	height: 30px;
+	border: 2px solid black;
+	text-align: center;
+	border-radius: 5px 5px 0px 0px;
+	color: white;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+
+#Scenario_Body {
+	background-color:rgba(255, 255, 255, 0.7);
+	width: auto;
+	height: auto;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	display: none;
+	padding: 10px;
+	border-radius: 0px 0px 5px 5px;
+}
+
+/**************************** Sortable Table ******************************/
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+    cursor:move;
+}
+
+#sortable li {
+    background-color: white;
+    padding: 5px;
+    border: 2px solid #C3002F;
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+#AssessmentButtons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ItemImages {
+    display: inline-block;
+}
+
+/**************Task 3***************************************/
+/*Item Reason Textbox */
+#txt_itemReason {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 5px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+/*Task 3: Table */
+table {
+    width: 100%;
+}
+
+td {
+    margin-bottom: 10px;
+}
+
+/*Modal confirmation box*/
+h4 {
+    text-align: center;
+}
+
+/********************MEDIA QUERYS***************************/
+@media only screen and (max-width: 350px) {
+    .ItemImages {
+        width: 30px;
+    }
+}
+
+@media only screen and (min-width:351px) {
+    .ItemImages {
+        width: 40px;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .ItemImages {
+        width: 50px;
+    }
+}

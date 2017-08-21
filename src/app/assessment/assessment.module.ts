@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { AssessmentRoutingModule } from './assessment-routing.module';
 
 import { AssessmentService } from './assessment.service';
@@ -20,7 +21,8 @@ import { DndModule } from 'ng2-dnd';
   imports: [
     CommonModule,
     AssessmentRoutingModule,
-    DndModule.forRoot()
+    DndModule.forRoot(),
+    FormsModule
   ],
   declarations: [
     AvailableItemComponent, 

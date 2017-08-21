@@ -73,6 +73,26 @@ export class AssessmentService {
                         "type":"text",
                         "answered": false
                         
+                      },
+                      { 
+                        "taskID":3,
+                        "name":"textbox",
+                        "description":"Why would you use these items that you have discovered at the crash site?",
+                        "questions": [
+                          "A Ball Of Steel Wool",
+                          "A Small Axe",
+                          "A Loaded .45 Calibre Pistol",
+                          "A Can Of Goose Fat",
+                          "A Newspaper (One Per Person)",
+                          "A Cigarette Lighter (Without Fluid)",
+                          "An Extra shirt and pants for each survivor",
+                          "A 20ft x 20ft piece of heavy-duty canvas",
+                        ],
+                        
+                        "type":"textbox",
+                        "answered": false,
+                        
+                        
                       }
 
                   ]

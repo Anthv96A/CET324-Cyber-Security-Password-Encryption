@@ -29,6 +29,22 @@
                   <button class="btn btn-primary" (click)="submitList()">Submit List</button>
             </div>
 
+            <div class="container-fluid" *ngIf="chosenTask.type == 'textbox'">
+                <h2>Task {{chosenTask.taskID}}</h2>
+                <p> {{ chosenTask.description }} </p>
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <ul class="list-group"> 
+                    <li *ngFor="let questions of chosenTask.questions; let i=index" class="list-group-item border-radius: 100px;">
+                        <div class="form-group">
+                            <label for="q{{i}}">{{questions}}</label>
+                            <input type="text" id="q{{i}}" placeholder="Reason Of Use" class="form-control" name="q{{i}}" ngModel>
+                        </div>
+                    </li>
+                </ul>
+                <button class="btn btn-primary" type="submit">Submit Answers</button>
+                </form>
+           </div>
+
 <hr>
 
           <div class="panel panel-default">

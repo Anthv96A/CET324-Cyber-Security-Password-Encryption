@@ -1,0 +1,41 @@
+  <form (ngSubmit)="onAddCandidate()" #f ="ngForm">
+     <div class="form-group">
+            <label class="form-control-label" for="field_name">Name</label>
+            <input type="text" placeholder="Candidate name" class="form-control" ngModel name="newName" required #name="ngModel" />
+            <span class="span-block" *ngIf ="!name.valid && name.touched">Please enter candidate name</span>
+     </div>
+    <div class="form-group">
+          <label class="form-control-label" for="field_name">University</label>
+          <input type="text" placeholder="Candidate university" class="form-control" ngModel name="newUniversity" required #university="ngModel">
+          <span class="span-block" *ngIf ="!university.valid && university.touched">Please enter candidate's university</span>
+    </div> 
+    <div class="form-group">
+          <label class="form-control-label" for="field_name">Degree</label>
+          <input type="text" placeholder="Candidate degree" class="form-control" ngModel name="newDegree" required #degree="ngModel">
+          <span class="span-block" *ngIf ="!degree.valid && degree.touched">Please enter candidate's degree</span>
+    </div> 
+    <div class="form-group">
+          <label class="form-control-label" for="field_name">Date</label>
+          <input type="date" placeholder="Assessment Date" class="form-control" ngModel name="newDate" required #date="ngModel">
+          <span class="span-block" *ngIf ="!date.valid && date.touched">An assessment date is required</span>
+    </div> 
+    <div class="form-group">
+          <label class="form-control-label" for="field_name">Group</label>
+          <select class="form-control" [ngModel]="groupDefault" name="newGroup" required #group="ngModel">
+             <option *ngFor ="let x of groupOptions">{{x}}</option>
+          </select>
+          <span class="span-block" *ngIf ="!group.valid && group.touched">An assessment group is required</span>
+    </div> 
+    <div class="form-group">
+          <input type="checkbox" (change) ="onChange($event.target.checked)"> <span>Create another candidate</span>
+    </div>
+    <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled] ="!f.valid">Submit</button>
+          <button class="btn btn-warning" (click) ="backToIndex()">Cancel</button>
+    </div>
+    
+</form>
+
+
+
+    

@@ -1,0 +1,44 @@
+ <div class="container" id="PageContainer">
+
+
+    <h2>{{chosenAssessment.name | titlecase}}</h2>
+    <hr>
+    <p>{{chosenAssessment.scenario}}</p>
+
+    <ul>
+        <li *ngFor="let items of chosenAssessment.items">{{items}}</li>
+    </ul>
+    
+    <div id="Objectives">
+        <h4><b><u>Objectives</u></b></h4>
+        <ol id="objectives">
+            <li *ngFor="let objectives of chosenAssessment.objectives">{{objectives}}</li>
+        </ol>
+    </div>
+        
+    <p style="text-align:center;"><b>You have 20 minutes to complete 3 tasks. Everyone must agree the final decision.</b></p>
+
+
+    
+    <div id="AssessmentControl">
+        <!--<a [routerLink] ="['/assessment',chosenAssessment.tasks[0].taskID]" class="btn btn-success" id="btn_StartAssessment" style="display:block;width:100%;">Start Assessment</a>-->
+        <!--<a [routerLink]="['/assessment', chosenAssessment.id ,chosenAssessment.tasks[0].taskID]" class="btn btn-success" id="btn_StartAssessment" style="display:block;width:100%;">Start Assessment</a>-->
+        <button class="btn btn-success" id="btn_StartAssessment" style="display:block;width:100%;" (click)="startTasks()">Start Assessment</button>
+    </div>
+    <hr>
+
+     <div class="col-xs-5" *ngIf="start">
+         <h2>Tasks</h2>
+         <div class="row" *ngFor="let task of chosenAssessment.tasks">
+            <ul class="list-group">
+                <li class="list-group-item">  <a [routerLink]="['/assessment', chosenAssessment.id ,task.taskID]"> <h3>Task : {{task.taskID}}</h3> </a></li>
+            </ul> 
+          
+         </div>
+     </div> 
+
+      <div class="col-xs-5" *ngIf="enabledSubmit">
+         <h2>Finish Assessment</h2>
+        <a [routerLink]="['/submission']"class="btn btn-warning">Finish</a>
+     </div> 
+</div>

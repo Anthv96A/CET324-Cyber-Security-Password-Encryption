@@ -1,0 +1,30 @@
+<div *ngIf="check; else noGroups">
+    <div class="page-header">
+        <h2>Today's Groups</h2>
+    </div>   
+    <div class="row">
+        <div class="col-xs-6">
+            <ul class="list-group" *ngFor="let group of allGroups">
+            <div class="list-group-item clearfix">
+                    <div class="pull-left">
+                        <h4 class="list-group-item-heading">{{group.name}}</h4>
+                        <p class="list-group-item-text"> {{group.date | date}}</p>
+                        <br>
+                        <h5>Candidates:</h5>
+                        <br>
+                        <div *ngFor="let candidate of group.candidates; let i = index;">
+                            {{i + 1}}.) {{candidate.name}} 
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">    
+   <ng-template #noGroups>
+      <h1>No groups have been added today</h1>
+      <h3>Please allocate candidates</h3>
+    </ng-template>
+  </div>

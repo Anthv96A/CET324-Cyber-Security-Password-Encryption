@@ -28,6 +28,7 @@ export class UserService{
         return this.http.post(this.url +'/user/signin', body, {headers: headers}).map((data: Response) =>{ return data.json() }).catch(this.catchException);
     }
 
+    
     logout(){
         localStorage.clear();
     }

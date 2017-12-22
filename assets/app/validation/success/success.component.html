@@ -1,0 +1,19 @@
+<div class="backdrop" [ngStyle]="{'display':display}">
+<div class="modal" [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title"> Success  </h3>
+        <button type="button" class="close" (click)="successHandled()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 [ngClass]="{'success': messageSuccessClassApplied === true}"> {{success?.message}} </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-success" (click)="successHandled()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

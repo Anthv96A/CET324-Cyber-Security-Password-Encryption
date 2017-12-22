@@ -1,13 +1,82 @@
 <div class="container-fluid">
-  <h2>Assessments</h2>
-  <p>Select an assessment from the list below to start. For group assessments, teams must be set up before starting an assessment.</p>
+  <h2>Welcome! {{username}} </h2>
+  <p>By creating a stronger password, you will be more protected in a very volatile from different types of threats!</p>
   <hr>
-  <div class="Assessment_Container">
-    <div class="row">
-      <app-active-assessments></app-active-assessments>
-    </div>
-    <div class="row">
-      <app-available-assessments></app-available-assessments>
+
+  <div class="container">
+    <div class="col-xs-12" style="border:1px solid grey;">
+        <p style="font-size: 20px;">{{ outputMessage }}</p>
     </div>
   </div>
+
+  <hr>
+
+  <div class="col-xs-5">
+      <div class="page-header">
+          <h1>Your password statistics</h1>      
+        </div>
+    <div class="list-group">
+
+      <div class="list-group-item">
+         <h4 class="list-group-item-heading">Your password length is </h4>
+         <h4 class="list-group-item-text" [style.color]="(passwordLength < 8) ? 'red' : (passwordLength >= 8 && passwordLength < 11) ? '#d3bf0c' : 'lime'">{{passwordLength}}</h4>
+      </div>
+
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Number of lowercase:</h4>
+        <h4 class="list-group-item-text" [style.color]="(lowercase == 0) ? 'red' : (lowercase >= 1 && lowercase < 4) ? '#d3bf0c': 'lime'"> {{ lowercase }}</h4>
+      </div>
+
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Number of uppercase: </h4>
+        <h4 class="list-group-item-text" [style.color]="(uppercase == 0) ? 'red' : (uppercase >= 1 && uppercase < 4) ? '#efda1a': 'lime'"> {{ uppercase }}</h4>
+      </div>
+      
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Number of special characters:</h4>
+        <h4 class="list-group-item-text" [style.color]="(specialChars == 0) ? 'red' : (specialChars >= 1 && specialChars < 4) ? '#efda1a': 'lime'"> {{ specialChars }}</h4>
+      </div>
+
+      <div class="list-group-item">
+          <h4 class="list-group-item-heading">Number of numeric values: </h4> 
+          <h4 class="list-group-item-text" [style.color]="(numericValues == 0) ? 'red' : (numericValues >= 1 && numericValues < 4) ? '#efda1a': 'lime'"> {{ numericValues }}</h4>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <div class="col-xs-7">
+      <div class="page-header">
+          <h1>Your password score : {{ totalScore +"/"+ 100 }}</h1>      
+        </div>
+    <div class="list-group">
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">Password length result </h4>
+        <h4 class="list-group-item-text" [style.color]="(passwordLength < 8) ? 'red' : (passwordLength >= 8 && passwordLength < 11) ? '#d3bf0c' : 'lime'">{{passwordLengthTextResult}}</h4>
+     </div>
+
+     <div class="list-group-item">
+       <h4 class="list-group-item-heading">Number of lowercase result </h4>
+       <h4 class="list-group-item-text" [style.color]="(lowercase == 0) ? 'red' : (lowercase >= 1 && lowercase < 4) ? '#d3bf0c': 'lime'"> {{ lowercaseTextResult }}</h4>
+     </div>
+
+     <div class="list-group-item">
+       <h4 class="list-group-item-heading">Number of uppercase result </h4>
+       <h4 class="list-group-item-text" [style.color]="(uppercase == 0) ? 'red' : (uppercase >= 1 && uppercase < 4) ? '#efda1a': 'lime'"> {{ uppercaseTextResult }}</h4>
+      </div>
+
+     <div class="list-group-item">
+       <h4 class="list-group-item-heading">Number of special characters result </h4>
+       <h4 class="list-group-item-text" [style.color]="(specialChars == 0) ? 'red' : (specialChars >= 1 && specialChars < 4) ? '#efda1a': 'lime'"> {{ specialCharsTextResult }}</h4>
+     </div>
+
+     <div class="list-group-item">
+         <h4 class="list-group-item-heading">Number of numeric values result </h4> 
+         <h4 class="list-group-item-text" [style.color]="(numericValues == 0) ? 'red' : (numericValues >= 1 && numericValues < 4) ? '#efda1a': 'lime'"> {{ numericValuesTextResult }}</h4>
+     </div>
+    </div>
+  </div>
+
+
 </div>

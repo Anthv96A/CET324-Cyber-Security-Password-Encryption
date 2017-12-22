@@ -2,8 +2,7 @@
 -------------------------------------------------- */
 .container-fluid {
 	background-color: black;  /*#C3002F;*/
-    border-bottom: 3px solid #C3002F;
-    font-family: NissanBrandLight;     
+    border-bottom: 3px solid #C3002F;  
 }
 
 .navbar-default .navbar-nav > li > a:hover{
@@ -57,7 +56,6 @@
     padding: 0px;
     padding-left: 5px;
     padding-right: 5px;
-    font-family: NissanBrandRegular;
 }
 
 #Title:hover {

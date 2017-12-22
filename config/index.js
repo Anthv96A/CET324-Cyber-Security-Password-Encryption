@@ -1,5 +1,5 @@
 module.exports = {
     getDbConnectionString: function(){
-        return "mongodb://localhost:27017/aca"
+        return "mongodb://localhost:27017/cet324"
     }
 }

@@ -5,20 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
+
+    year: Date;
+
+
+    constructor(){
+      this.year = new Date();
+    }
   
-  backgroundImg: any;
-
-  object = {
-      link : 'assets/img/nissan_background.jpg'
-  }
-
-  constructor() {
-    this.backgroundImg = 'url(img/nissan_background.jpg)';
-  }
-    
-
-  ngOnInit() {
-  }
+    // Background image 
+    background = { link : '../../../img/cyber-security-background.png' };
 
 }

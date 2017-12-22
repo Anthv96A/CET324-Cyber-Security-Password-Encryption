@@ -1,5 +1,16 @@
 /* Login Form 
 -------------------------------------------------- */
+
+
+input.ng-invalid.ng-touched {
+    border: 3px solid red;
+    color: red;
+  }
+
+span.ng-invalid.ng-touched {
+    color: red;
+  }
+
 #password {
     width: auto;
     display: inline-block;
@@ -7,7 +18,6 @@
 
 #InputUserId1, #InputPassword1 {
     border: none;
-    border-left: 2px solid #00569e;
     width: 400px;
     border-radius: 0px;
     height: 50px;
@@ -16,12 +26,14 @@
 }
 
 #InputUserId1 { 
+    width:436px;
     margin-bottom: 20px;
     background: url(/img/User_font_awesome.png) no-repeat;
     color: white;
 }
 
 #InputPassword1 { 
+    width:436px;
     margin-bottom: 20px;
     background: url(/img/locked_1.png) no-repeat;
     color: white;
@@ -58,16 +70,10 @@
     color: rgba(189, 228, 248, 0.6);
 }
 
-#btnRememberMe {
-    margin-top:20px;
-    font-size:10pt;
-    color: rgba(255, 255, 255, 0.7);
-   
-}
 
 #loginFormContainer {
     text-align: left;
-    margin-top: 30vh;
+    margin-top: 15vh;
     margin-left: 80px;
     width: 600px;
     font-size:12pt;

@@ -6,13 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config');
+var RateLimit = require('express-rate-limit');
 
 var appRoutes = require('./controllers/app');
-var candidateRoutes = require('./controllers/candidates')
-var groupRoutes = require('./controllers/groups');
+var userRoutes = require('./controllers/user');
+
 
 var app = express();
-mongoose.connect("localhost:27017/aca");
+mongoose.connect('bg71ul:test123@ds145275.mlab.com:45275/cet324');
+
+app.enable('trust proxy')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,8 +36,15 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/candidate', candidateRoutes);
-app.use('/group', groupRoutes);
+
+// var limiter = new RateLimit({
+//     windowMs: 1 * 60 * 1000, // 1 minutes
+//     max: 10,
+//     delayMs: 0
+// });
+
+//app.use(limiter)
+app.use('/user', userRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler

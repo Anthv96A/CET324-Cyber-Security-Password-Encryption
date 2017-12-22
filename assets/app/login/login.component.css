@@ -18,14 +18,11 @@
     margin-left: 15px;
 }
 
-div .navbar-brand h3 {
-    font-family: NissanBrandBold;
-}
-
 #Title {
     margin-top: 14px;
+    text-align: center;
     color: white;
-    font-family: NissanBrandLight;
+    font-size: 20px;
 }
 
 .navbar-default {
@@ -55,8 +52,6 @@ div .navbar-brand h3 {
     z-index: -1;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
 .footer {
     font-family: NissanBrandLight;
     position: absolute;
@@ -70,38 +65,15 @@ div .navbar-brand h3 {
 
 }
 
-#slogan {
-    margin-left: 50px;
-}
-
-#slogan, #options {
+#copyright {
     display: inline-block;
-}
-
-#options {
-    font-size: 9pt;
-    margin-top: 50px;
     float: right;
 }
 
-#options ul {
-    list-style-type: none;
+.provider {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
-#options li {
-    float: left;
-}
 
-#options li a {
-    display: inline-block;
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-}
-
-@media only screen and (max-width:1024px) {
-    #options li a {
-        padding: 10px;
-    }
-}

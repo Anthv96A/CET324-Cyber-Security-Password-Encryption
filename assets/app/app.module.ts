@@ -6,32 +6,37 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Bootstrap component
 import { AppComponent } from './app.component';
 
-import { LoginComponent } from './login/login.component';
-import { LoginformComponent } from './login/loginform/loginform.component';
-
-import { AssessmentModule } from './assessment/assessment.module';
+import { ErrorComponent } from './validation/errors/error.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CandidateModule} from './candidate/candidate.module';
 import { HomeModule } from './home/home.module';
-import { GroupModule } from './group/group.module';
- 
+import { LoginModule } from './login/login.module';
+import { UserService } from './login/login.service';
+import { AuthGuard } from './auth.guard';
+
+import { ErrorService } from './validation/errors/error.service';
+import { SuccessComponent } from './validation/success/success.component';
+import { SuccessService } from './validation/success/success.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    LoginformComponent
+    ErrorComponent,
+    SuccessComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
-    AssessmentModule,
-    CandidateModule,
-    HomeModule,
-    GroupModule,
     AppRoutingModule,
-    CommonModule
+    HomeModule,
+    LoginModule,
   ],
-  providers: [],
+  providers: [
+    UserService,
+    AuthGuard,
+    ErrorService,
+    SuccessService
+    ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

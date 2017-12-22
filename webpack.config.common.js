@@ -25,6 +25,10 @@ module.exports = {
                 options: {
                     limit: 25000,
               }
+            },
+             {
+                test: /\.(otf|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=public/[name].[ext]'
             }
 
         ],

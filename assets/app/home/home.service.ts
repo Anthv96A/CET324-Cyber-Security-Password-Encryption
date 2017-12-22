@@ -18,7 +18,7 @@ export class HomeService{
 
         const id: string = localStorage.getItem('userId');
 
-         return this.http.get(this.url+"/user/" + id).map((response:Response) => {
+         return this.http.get(this.url+"user/" + id).map((response:Response) => {
             return response.json();
         });
     }

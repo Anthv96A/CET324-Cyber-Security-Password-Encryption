@@ -19,13 +19,13 @@ export class UserService{
     signup(user){
         const body  = JSON.stringify(user)
         const headers = new Headers({'Content-Type':'application/json'});
-        return this.http.post(this.url +'/user/', body, {headers: headers}).map(this.extractData).catch(this.catchException);
+        return this.http.post(this.url +'user/', body, {headers: headers}).map(this.extractData).catch(this.catchException);
     }
 
     signin(user){
         const body  = JSON.stringify(user)
         const headers = new Headers({'Content-Type':'application/json'});
-        return this.http.post(this.url +'/user/signin', body, {headers: headers}).map((data: Response) =>{ return data.json() }).catch(this.catchException);
+        return this.http.post(this.url +'user/signin', body, {headers: headers}).map((data: Response) =>{ return data.json() }).catch(this.catchException);
     }
 
     

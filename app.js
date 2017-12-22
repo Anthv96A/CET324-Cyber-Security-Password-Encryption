@@ -13,8 +13,8 @@ var userRoutes = require('./controllers/user');
 
 
 var app = express();
-// mongoose.connect('bg71ul:test123@ds145275.mlab.com:45275/cet324');
-mongoose.connect('localhost:27017/cet324');
+ mongoose.connect('bg71ul:test123@ds145275.mlab.com:45275/cet324');
+//mongoose.connect('localhost:27017/cet324');
 app.enable('trust proxy')
 
 // view engine setup

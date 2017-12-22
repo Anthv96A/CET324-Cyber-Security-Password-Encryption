@@ -16,10 +16,9 @@ import * as i6 from '@angular/http';
 import * as i7 from '@angular/forms';
 import * as i8 from '@angular/router';
 import * as i9 from './login-routing.module';
-import * as i10 from 'ng2-password-strength-bar/lib/passwordStrengthBar.module';
-import * as i11 from './login.component';
-import * as i12 from './signup/signup.component';
-import * as i13 from './loginform/loginform.component';
+import * as i10 from './login.component';
+import * as i11 from './signup/signup.component';
+import * as i12 from './loginform/loginform.component';
 export const LoginModuleNgFactory:i0.NgModuleFactory<i1.LoginModule> = i0.ɵcmf(i1.LoginModule,
     ([] as any[]),(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -36,12 +35,11 @@ export const LoginModuleNgFactory:i0.NgModuleFactory<i1.LoginModule> = i0.ɵcmf(
               i9.LoginRoutingModule,i9.LoginRoutingModule,([] as any[])),i0.ɵmpd(512,
               i6.HttpModule,i6.HttpModule,([] as any[])),i0.ɵmpd(512,i7.ɵba,i7.ɵba,
               ([] as any[])),i0.ɵmpd(512,i7.FormsModule,i7.FormsModule,([] as any[])),
-          i0.ɵmpd(512,i10.PasswordStrengthBarModule,i10.PasswordStrengthBarModule,
-              ([] as any[])),i0.ɵmpd(512,i1.LoginModule,i1.LoginModule,([] as any[])),
-          i0.ɵmpd(1024,i8.ROUTES,() => {
-            return [[{path:'',redirectTo:'/login/signin',pathMatch:'full'},{path:'login',
-                component:i11.LoginComponent,children:[{path:'signup',component:i12.SignUpComponent},
-                    {path:'signin',component:i13.LoginformComponent}]}]];
-          },([] as any[]))]);
+          i0.ɵmpd(512,i1.LoginModule,i1.LoginModule,([] as any[])),i0.ɵmpd(1024,i8.ROUTES,
+              () => {
+                return [[{path:'',redirectTo:'/login/signin',pathMatch:'full'},{path:'login',
+                    component:i10.LoginComponent,children:[{path:'signup',component:i11.SignUpComponent},
+                        {path:'signin',component:i12.LoginformComponent}]}]];
+              },([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9hbnRoby9BZHZhbmNlZCBDeWJlciBTZWN1cml0eS9Bc3NpZ25tZW50IHR3by9Bc3NpZ25tZW50L2Fzc2V0cy9hcHAvbG9naW4vbG9naW4ubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luLm1vZHVsZS5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9DOi9Vc2Vycy9hbnRoby9BZHZhbmNlZCBDeWJlciBTZWN1cml0eS9Bc3NpZ25tZW50IHR3by9Bc3NpZ25tZW50L2Fzc2V0cy9hcHAvbG9naW4vbG9naW4ubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

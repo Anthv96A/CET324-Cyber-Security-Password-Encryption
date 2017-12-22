@@ -37,8 +37,7 @@ import * as i27 from './app-routing.module';
 import * as i28 from './home/home-routing.module';
 import * as i29 from './home/home.module';
 import * as i30 from './login/login-routing.module';
-import * as i31 from 'ng2-password-strength-bar/lib/passwordStrengthBar.module';
-import * as i32 from './login/login.module';
+import * as i31 from './login/login.module';
 export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.AppModule,
     [i2.AppComponent],(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
@@ -118,9 +117,8 @@ export const AppModuleNgFactory:i0.NgModuleFactory<i1.AppModule> = i0.ɵcmf(i1.A
               ([] as any[])),i0.ɵmpd(512,i28.HomeRoutingModule,i28.HomeRoutingModule,
               ([] as any[])),i0.ɵmpd(512,i29.HomeModule,i29.HomeModule,([] as any[])),
           i0.ɵmpd(512,i30.LoginRoutingModule,i30.LoginRoutingModule,([] as any[])),
-          i0.ɵmpd(512,i15.HttpModule,i15.HttpModule,([] as any[])),i0.ɵmpd(512,i31.PasswordStrengthBarModule,
-              i31.PasswordStrengthBarModule,([] as any[])),i0.ɵmpd(512,i32.LoginModule,
-              i32.LoginModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,i1.AppModule,
+          i0.ɵmpd(512,i15.HttpModule,i15.HttpModule,([] as any[])),i0.ɵmpd(512,i31.LoginModule,
+              i31.LoginModule,([] as any[])),i0.ɵmpd(512,i1.AppModule,i1.AppModule,
               ([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2FwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2FwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

@@ -7,7 +7,7 @@ import { LoginformComponent } from './loginform/loginform.component';
 import { SignUpComponent } from './signup/signup.component';
 import { UserService } from './login.service';
 import { FormsModule } from '@angular/forms';
-import { PasswordStrengthBarModule } from 'ng2-password-strength-bar'
+import { PasswordStrengthBar } from './PasswordStrengthBar/passwordStrengthBar';
 
 
 @NgModule({
@@ -15,13 +15,13 @@ import { PasswordStrengthBarModule } from 'ng2-password-strength-bar'
     CommonModule,
     LoginRoutingModule,
     HttpModule,
-    FormsModule,
-    PasswordStrengthBarModule
+    FormsModule
   ],
   declarations: [
       LoginComponent,
       LoginformComponent,
-      SignUpComponent
+      SignUpComponent,
+      PasswordStrengthBar
   ],
   exports: [
       LoginComponent,

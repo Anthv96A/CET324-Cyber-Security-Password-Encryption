@@ -1,5 +1,6 @@
 /node_modules
 /.idea
 /typings
-/public/js/
+/public/js/app/assets
+/public/js/app/e2e
 npm-debug.log

@@ -15,7 +15,7 @@ export class LoginformComponent {
 
     constructor( private userService: UserService, private router: Router) {}
 
-    public user = {};
+    public user = { username: "", password: ""};
 
 
     onSubmit(){

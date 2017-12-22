@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
-import { User } from '../login/user.model';
 import { Observable } from 'rxjs';
 import { ErrorService } from '../validation/errors/error.service';
 
@@ -15,7 +14,7 @@ export class HomeService{
         private errorService:ErrorService
     ){}
 
-    fetchUser(): Observable<User>{
+    fetchUser(){
 
         const id: string = localStorage.getItem('userId');
 

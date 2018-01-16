@@ -1,5 +1,4 @@
 <div id="loginFormContainer">
-
     <div>
         <p style="margin-bottom:30px; font-size:50px">Please enter your login credentials</p>
         <form id="loginForm" (ngSubmit)="onSubmit()" #form="ngForm">
@@ -13,11 +12,9 @@
                             <input type="password" class="form-control" [(ngModel)]="user.password" name="password" id="InputPassword1" placeholder="Password" required>
                         </div>               
                     </div>
-
             <button type="submit" class="btn btn-primary" [disabled] ="!form.valid" id="btnlogin"> Log in</button>
             <button class="btn btn-primary"[routerLink]="['../signup']" id="btnlogin">Signup</button>
         </form>
     </div>
-
 </div>  
 

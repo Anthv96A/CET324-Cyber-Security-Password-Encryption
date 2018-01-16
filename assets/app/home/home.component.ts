@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     private static MAX_ATTEMPTS_PASSWORD_LENGTH: number = 12;
     private static MAX_ATTEMPTS: number = 5;
 
-
     totalScore: number;
     outputMessage: string;
 
@@ -25,13 +24,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     numericValues: number;
     subscription$: Subscription;
 
-
     passwordLengthTextResult: string;
     lowercaseTextResult: string;
     uppercaseTextResult: string;
     specialCharsTextResult: string;
     numericValuesTextResult: string;
-
 
     constructor(private homeService: HomeService){}
 
@@ -48,18 +45,13 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.outputFeedback();
             this.outputMessage = this.finalOutputString();
         })
-
-       
-
     }
 
     ngOnDestroy(){
         this.subscription$.unsubscribe();
     }
 
-
     determinePasswordScore(): number{
-
         let score: number = 0;
 
         for(let i = 0; i <= this.passwordLength; i++){
@@ -73,10 +65,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     score+=5;
                 }
             }
-           
         }
-        // console.log("Score on password length: " + score)
-        // score = 0;
 
         for(let j = 0; j <= this.lowercase; j++){
             if(j >= 1){
@@ -87,11 +76,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 }
             }
         }
-
-
-        // console.log("Score on lowercase: " + score)
-        // score = 0;
-
         
         for(let j = 0; j <= this.uppercase; j++){
             if(j >= 1){
@@ -103,10 +87,6 @@ export class HomeComponent implements OnInit, OnDestroy {
             }
         }
 
-        // console.log("Score on uppercase: " + score)
-        // score = 0;
-
-
         for(let j = 0; j <= this.specialChars; j++){
             if(j >= 1){
                 if(j >=  HomeComponent.MAX_ATTEMPTS ){
@@ -116,10 +96,6 @@ export class HomeComponent implements OnInit, OnDestroy {
                 }
             }
         }
-        // console.log("Score on special chars: " + score)
-        // score = 0;
-
-        
 
         for(let j = 0; j <= this.numericValues; j++){
             if(j >= 1){
@@ -130,12 +106,8 @@ export class HomeComponent implements OnInit, OnDestroy {
                 }
             }
         }
-        // console.log("Score on numeric values: " + score)
-        // score = 0;
-
         return score;
     }
-
 
     outputFeedback(){
         if(this.passwordLength < 8){
@@ -179,7 +151,6 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.numericValuesTextResult = "Very Good"
         }
     }
-
 
     finalOutputString(): string {
         let passwordLengthOutput: string;
@@ -236,7 +207,5 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         return finalOutput;
     }
-
-
 
 }

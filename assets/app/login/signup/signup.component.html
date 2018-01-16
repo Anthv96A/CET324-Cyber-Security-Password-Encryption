@@ -1,72 +1,38 @@
-<div id="loginFormContainer">
-        <h2 style="font-weight: bold;">Important information</h2>
-    <div>
-        <!-- <p style="margin-bottom:30px; font-size:50px">Signup</p> -->
-        <div class="alert alert-success">
-               <p style="color:black;">Hello there! Welcome to the registration page! When creating a password, ensure the password is strong
-               to deter hackers and stop your password being easily cracked. To minimise the risk, please ensure the do the following when creating a password: 
-               <strong style="color:red;">Be at least 8 characters long, include one uppercase, include one lowercase, include one numeric value and finally include one special character.</strong>
-               Use the strength bar to indicate your password strength! 
+<div class="container-fluid" id="loginFormContainer">
+        <h2 style="font-weight: bold;">Your password feedback</h2>
 
-            </p>
-              </div>
+        <div class="jumbotron col-xs-8" style=" background:black;">
+            <ul class="list-group">
+                <li class="list-group-item-text" style="margin-left:5px;" [style.color]="(uppercase == 0) ? 'red' : (uppercase >= 1 && uppercase < 4) ? '#FFFF00': '#4BB543'">Password uppercase: {{ uppercase }}</li>
+                <li class="list-group-item-text" style="margin-left:5px;" [style.color]="(lowercase == 0) ? 'red' : (lowercase >= 1 && lowercase < 4) ? '#d3bf0c': '#4BB543'">Password lowercase: {{ lowercase }}</li>
+                <li class="list-group-item-text" style="margin-left:5px;" [style.color]="(numericValues == 0) ? 'red' : (numericValues >= 1 && numericValues < 4) ? '#efda1a': '#4BB543'">Password numeric values: {{ numericValues }}</li>
+                <li class="list-group-item-text" style="margin-left:5px;" [style.color]="(specialChars == 0) ? 'red' : (specialChars >= 1 && specialChars < 4) ? '#efda1a': '#4BB543'">Password special characters: {{ specialChars }}</li>
+                <li class="list-group-item-text" style="margin-left:5px;" [style.color]= "(passwordLength < 8) ? 'red' : (passwordLength >= 8 && passwordLength < 11) ? '#d3bf0c' : '#4BB543'">Password length: {{passwordLength}}</li>
+           </ul>
 
-              <hr>
-     <h4>Please create your login and password</h4>
+     </div>
         <form id="loginForm" (ngSubmit)="onSubmit()" #form="ngForm">
             <div class="form-group">
                 <div class="inner-addon left-addon">
-                    <input
-                        type="userid"
-                        class="form-control"
-                        [(ngModel)]="user.username" 
-                        name="username" 
-                        id="InputUserId1"
-                        placeholder="Username"  
-                        pattern="^[-a-zA-Z0-9@\.+_]+$"
+                    <input  type="userid"  class="form-control"  [(ngModel)]="user.username"  name="username" id="InputUserId1" placeholder="Username" pattern="^[-a-zA-Z0-9@\.+_]+$"
                         required
                         #name="ngModel">
                     <span class="span-block" style="color:red;" *ngIf="name.touched && !name.valid">Please enter a username</span>
-                    <br>
                     <span class="span-block" style="color:red;" *ngIf="name.touched && !name.valid">Spaces are not allowed</span>
                 </div>               
             </div>
-
             <div class="form-group">
                 <div class="inner-addon left-addon"  id="password">
-                    <input 
-                        type="password" 
-                        class="form-control" 
-                        [(ngModel)]="user.password"
-                        name="password" id="InputPassword1"
-                        placeholder="Password" 
-                        required
-                        #passwordChecker="ngModel">
-                        <ul 
-                        class="list-group" 
-                        *ngIf="!passwordChecker.valid && passwordChecker.touched">
-                 
-                               <li class="list-group-item list-group-item-danger">Password must contain one uppercase</li>
-                               <li class="list-group-item list-group-item-danger">Password must contain one lowercase</li>
-                               <li class="list-group-item list-group-item-danger">Password must contain one numeric value</li>
-                               <li class="list-group-item list-group-item-danger">Password must contain one special character e.g ! $</li>
-                               <li class="list-group-item list-group-item-danger">Password must be at least 8 characters long</li>
-                       
-                          </ul>
+                    <input type="password" class="form-control" [(ngModel)]="user.password" name="password" (ngModelChange)="passwordFeedback($event)" id="InputPassword1" placeholder="Password" required>
+                    
                     <h3 style ="color:white">Password Strength</h3>
-
-                    <!-- pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}" -->
-                
                     <password-strength-bar
                      [passwordToCheck]="user.password"
                      [barLabel]="barLabel">
                     </password-strength-bar>
-
                 </div>               
             </div>
-
-            <button type="submit" class="btn btn-primary" [disabled]="!form.valid" id="btnlogin">Register</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid" id="btnregister">Register</button>
             <button class="btn btn-primary" [routerLink]="['../signin']" id="btnlogin">Back to Login</button>
         </form>
-    </div>
 </div>  

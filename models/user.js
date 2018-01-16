@@ -12,7 +12,6 @@ var schema = new Schema({
     passwordLength: {type: Number}
 });
 
-
 schema.plugin(mongooseUniqueValidator);
 
 var User = mongoose.model('User', schema);

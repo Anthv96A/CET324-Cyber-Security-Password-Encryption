@@ -10,10 +10,16 @@ import { UserService } from '../login.service';
 })
 export class SignUpComponent {
 
-    constructor( private userService: UserService) {}
+    constructor(private userService: UserService) {}
 
     public user = {} as User;
     public barLabel: string = "";
+
+    uppercase:number = 0;
+    lowercase:number = 0;
+    numericValues:number = 0;
+    specialChars:number = 0;
+    passwordLength:number = 0;
 
     onSubmit(){
         this.extractValues(this.user.password);
@@ -23,22 +29,22 @@ export class SignUpComponent {
     }
 
 
+
+    passwordFeedback(password: string){
+        this.uppercase = password.length - password.replace(/[A-Z]/g,'').length;
+        this.lowercase = password.length - password.replace(/[a-z]/g,'').length;
+        this.numericValues = password.length - password.replace(/[0-9]/g,'').length;
+        this.specialChars = password.length - password.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').length;
+        this.passwordLength = password.length;
+    }
+
+
     private extractValues(password:string){
-            
             this.user.uppercase = password.length - password.replace(/[A-Z]/g,'').length;
             this.user.lowercase = password.length - password.replace(/[a-z]/g,'').length;
             this.user.numericValues = password.length - password.replace(/[0-9]/g,'').length;
             this.user.specialChars = password.length - password.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').length;
             this.user.passwordLength = password.length;
-
-
-            // console.log("Number of uppercase: "+this.uppercase);
-            // console.log("Number of lowercase: "+this.lowercase);
-            // console.log("Number of numeric values: "+this.numericvalues);
-            // console.log("Number of special chars: "+this.specialchars);
-            // console.log("Password length: "+this.passwordLength);
-        
-
     }
 
 }

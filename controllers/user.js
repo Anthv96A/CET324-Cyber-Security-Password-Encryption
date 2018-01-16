@@ -8,13 +8,13 @@ var RateLimit = require('express-rate-limit');
 
 var limiter = new RateLimit({
     windowMs: 1 * 60 * 1000, // 1 minutes
-    max: 2,
+    max: 2, // 2 for demo purposes
     delayMs: 0,
 });
 
 router.post('/', function (req, res, next) {
     var user = new User({
-        password:   bcrypt.hashSync(req.body.password,10),
+        password:   bcrypt.hashSync(req.body.password,10), // The 10 is the strength of the algorithm
         username: req.body.username,
         lowercase: req.body.lowercase,
         uppercase: req.body.uppercase,
@@ -40,15 +40,12 @@ router.post('/', function (req, res, next) {
 router.get('/:id', function(req,res,next){
 
     User.findById({_id: req.params.id}, function(err, user){
-        console.log(req.params.id);
-
         if(err){
             return res.status(500).json({
                 title: 'An error occurred',
                 error: err
             });
         };
-
         res.status(200).json({
             message: 'User!',
             obj: user
@@ -66,17 +63,12 @@ router.post('/signin', limiter ,function(req, res, next){
                     error: err
                 });
             };
-
-
-            // console.log(err);
-
             if(err){
                 return res.status(429).json({
                     title: 'Suspected Brute force attack',
                     error: {message: 'Suspected Brute force attack, this IP will be blocked for one minute' }
                 })
-            }
-
+            };
              if(!user){
                 return res.status(401).json({
                     title: 'Login failed' ,

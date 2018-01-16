@@ -49,6 +49,16 @@ span.ng-invalid.ng-touched {
     font-size:12pt;
 }
 
+#btnregister {
+    width:134px;
+    height: 50px;
+    border: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: #0f3455;
+    font-size:12pt;
+}
+
 #btnViewPassword {
     background-color: #001b34;
     height: 50px;

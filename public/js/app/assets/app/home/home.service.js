@@ -11,7 +11,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { ErrorService } from '../validation/errors/error.service';
 var HomeService = /** @class */ (function () {
-    //  private url = 'http://localhost:3000/';
+    // private url = 'http://localhost:3000/';
     function HomeService(http, errorService) {
         this.http = http;
         this.errorService = errorService;

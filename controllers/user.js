@@ -10,7 +10,9 @@ var limiter = new RateLimit({
     windowMs: 1 * 60 * 1000, // 1 minutes
     max: 2, // 2 for demo purposes
     delayMs: 0,
+    message: "Too many requests to this server, blocked from this IP"
 });
+
 
 
 router.put('/:username', function(req, res, next){
@@ -125,16 +127,17 @@ router.get('/:id', function(req,res,next){
 router.post('/signin', limiter ,function(req, res, next){
 
     User.findOne({username: req.body.username}, function(err, user){
+
             if(err){
                 return res.status(500).json({
                     title: 'An error occurred',
                     error: err
                 });
             };
-            if(err){
+            if(req.rateLimit.remaining === 0){
                 return res.status(429).json({
                     title: 'Suspected Brute force attack',
-                    error: {message: 'Suspected Brute force attack, this IP will be blocked for one minute' }
+                    error: {message: 'You will be blocked from this IP one minute' }
                 })
             };
              if(!user){

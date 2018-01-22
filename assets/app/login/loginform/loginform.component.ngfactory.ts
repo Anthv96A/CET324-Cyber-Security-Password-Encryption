@@ -16,16 +16,16 @@ const styles_LoginformComponent:any[] = [i0.styles];
 export const RenderType_LoginformComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_LoginformComponent,data:{}});
 export function View_LoginformComponent_0(_l:any):i1.ɵViewDefinition {
-  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),52,'div',[['id',
+  return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),57,'div',[['id',
       'loginFormContainer']],(null as any),(null as any),(null as any),(null as any),
       (null as any))),(_l()(),i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵeld(0,
-      (null as any),(null as any),49,'div',([] as any[]),(null as any),(null as any),
+      (null as any),(null as any),54,'div',([] as any[]),(null as any),(null as any),
       (null as any),(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['\n        '])),
       (_l()(),i1.ɵeld(0,(null as any),(null as any),1,'p',[['style','margin-bottom:30px; font-size:50px']],
           (null as any),(null as any),(null as any),(null as any),(null as any))),
       (_l()(),i1.ɵted((null as any),['Please enter your login credentials'])),(_l()(),
           i1.ɵted((null as any),['\n        '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),
-          43,'form',[['id','loginForm'],['novalidate','']],[[2,'ng-untouched',(null as any)],
+          48,'form',[['id','loginForm'],['novalidate','']],[[2,'ng-untouched',(null as any)],
               [2,'ng-touched',(null as any)],[2,'ng-pristine',(null as any)],[2,'ng-dirty',
                   (null as any)],[2,'ng-valid',(null as any)],[2,'ng-invalid',(null as any)],
               [2,'ng-pending',(null as any)]],[[(null as any),'ngSubmit'],[(null as any),
@@ -103,12 +103,12 @@ export function View_LoginformComponent_0(_l:any):i1.ɵViewDefinition {
           (null as any),i3.NgControl,(null as any),[i3.NgModel]),i1.ɵdid(16384,(null as any),
           0,i3.NgControlStatus,[i3.NgControl],(null as any),(null as any)),(_l()(),
           i1.ɵted((null as any),['\n                        '])),(_l()(),i1.ɵted((null as any),
-          ['               \n                    '])),(_l()(),i1.ɵted((null as any),
-          ['\n                    '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),
-          13,'div',[['class','form-group']],(null as any),(null as any),(null as any),
-          (null as any),(null as any))),(_l()(),i1.ɵted((null as any),['\n                        '])),
-      (_l()(),i1.ɵeld(0,(null as any),(null as any),10,'div',[['class','inner-addon left-addon'],
-          ['id','password']],(null as any),(null as any),(null as any),(null as any),
+          ['\n                    '])),(_l()(),i1.ɵted((null as any),['\n                    '])),
+      (_l()(),i1.ɵeld(0,(null as any),(null as any),13,'div',[['class','form-group']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted((null as any),['\n                        '])),(_l()(),i1.ɵeld(0,
+          (null as any),(null as any),10,'div',[['class','inner-addon left-addon'],
+              ['id','password']],(null as any),(null as any),(null as any),(null as any),
           (null as any))),(_l()(),i1.ɵted((null as any),['\n                            '])),
       (_l()(),i1.ɵeld(0,(null as any),(null as any),7,'input',[['class','form-control'],
           ['id','InputPassword1'],['name','password'],['placeholder','Password'],['required',
@@ -156,25 +156,37 @@ export function View_LoginformComponent_0(_l:any):i1.ɵViewDefinition {
           (null as any),i3.NgControl,(null as any),[i3.NgModel]),i1.ɵdid(16384,(null as any),
           0,i3.NgControlStatus,[i3.NgControl],(null as any),(null as any)),(_l()(),
           i1.ɵted((null as any),['\n                        '])),(_l()(),i1.ɵted((null as any),
-          ['               \n                    '])),(_l()(),i1.ɵted((null as any),
-          ['\n            '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'button',
-          [['class','btn btn-primary'],['id','btnlogin'],['type','submit']],[[8,'disabled',
-              0]],(null as any),(null as any),(null as any),(null as any))),(_l()(),
-          i1.ɵted((null as any),[' Log in'])),(_l()(),i1.ɵted((null as any),['\n            '])),
-      (_l()(),i1.ɵeld(0,(null as any),(null as any),3,'button',[['class','btn btn-primary'],
-          ['id','btnlogin']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
-        var ad:boolean = true;
-        if (('click' === en)) {
-          const pd_0:any = ((<any>i1.ɵnov(_v,47).onClick()) !== false);
-          ad = (pd_0 && ad);
-        }
-        return ad;
-      },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i4.RouterLink,
+          ['\n                    '])),(_l()(),i1.ɵted((null as any),['\n            '])),
+      (_l()(),i1.ɵeld(0,(null as any),(null as any),1,'button',[['class','btn btn-primary'],
+          ['id','btnlogin'],['type','submit']],[[8,'disabled',0]],(null as any),(null as any),
+          (null as any),(null as any))),(_l()(),i1.ɵted((null as any),[' Log in'])),
+      (_l()(),i1.ɵted((null as any),['\n            '])),(_l()(),i1.ɵeld(0,(null as any),
+          (null as any),3,'button',[['class','btn btn-primary'],['id','btnRegister']],
+          (null as any),[[(null as any),'click']],(_v,en,$event) => {
+            var ad:boolean = true;
+            if (('click' === en)) {
+              const pd_0:any = ((<any>i1.ɵnov(_v,47).onClick()) !== false);
+              ad = (pd_0 && ad);
+            }
+            return ad;
+          },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i4.RouterLink,
           [i4.Router,i4.ActivatedRoute,[8,(null as any)],i1.Renderer2,i1.ElementRef],
           {routerLink:[0,'routerLink']},(null as any)),i1.ɵpad(1),(_l()(),i1.ɵted((null as any),
-          ['Signup'])),(_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),i1.ɵted((null as any),
-          ['\n    '])),(_l()(),i1.ɵted((null as any),['\n'])),(_l()(),i1.ɵted((null as any),
-          ['  \n\n']))],(_ck,_v) => {
+          ['Signup'])),(_l()(),i1.ɵted((null as any),['\n          '])),(_l()(),i1.ɵeld(0,
+          (null as any),(null as any),3,'button',[['class','btn btn-primary'],['id',
+              'btnChange']],(null as any),[[(null as any),'click']],(_v,en,$event) => {
+            var ad:boolean = true;
+            if (('click' === en)) {
+              const pd_0:any = ((<any>i1.ɵnov(_v,52).onClick()) !== false);
+              ad = (pd_0 && ad);
+            }
+            return ad;
+          },(null as any),(null as any))),i1.ɵdid(16384,(null as any),0,i4.RouterLink,
+          [i4.Router,i4.ActivatedRoute,[8,(null as any)],i1.Renderer2,i1.ElementRef],
+          {routerLink:[0,'routerLink']},(null as any)),i1.ɵpad(1),(_l()(),i1.ɵted((null as any),
+          ['Change Password'])),(_l()(),i1.ɵted((null as any),['\n        '])),(_l()(),
+          i1.ɵted((null as any),['\n    '])),(_l()(),i1.ɵted((null as any),['\n'])),
+      (_l()(),i1.ɵted((null as any),['\n\n']))],(_ck,_v) => {
     var _co:i2.LoginformComponent = _v.component;
     const currVal_15:any = '';
     _ck(_v,19,0,currVal_15);
@@ -188,6 +200,8 @@ export function View_LoginformComponent_0(_l:any):i1.ɵViewDefinition {
     _ck(_v,37,0,currVal_27,currVal_28);
     const currVal_30:any = _ck(_v,48,0,'../signup');
     _ck(_v,47,0,currVal_30);
+    const currVal_31:any = _ck(_v,53,0,'../change');
+    _ck(_v,52,0,currVal_31);
   },(_ck,_v) => {
     const currVal_0:any = i1.ɵnov(_v,11).ngClassUntouched;
     const currVal_1:any = i1.ɵnov(_v,11).ngClassTouched;
@@ -224,9 +238,9 @@ export function View_LoginformComponent_0(_l:any):i1.ɵViewDefinition {
 export function View_LoginformComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'app-loginform',
       ([] as any[]),(null as any),(null as any),(null as any),View_LoginformComponent_0,
-      RenderType_LoginformComponent)),i1.ɵdid(49152,(null as any),0,i2.LoginformComponent,
+      RenderType_LoginformComponent)),i1.ɵdid(180224,(null as any),0,i2.LoginformComponent,
       [i5.UserService,i4.Router],(null as any),(null as any))],(null as any),(null as any));
 }
 export const LoginformComponentNgFactory:i1.ComponentFactory<i2.LoginformComponent> = i1.ɵccf('app-loginform',
     i2.LoginformComponent,View_LoginformComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luZm9ybS9sb2dpbmZvcm0uY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbmZvcm0vbG9naW5mb3JtLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbmZvcm0vbG9naW5mb3JtLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luZm9ybS9sb2dpbmZvcm0uY29tcG9uZW50LnRzLkxvZ2luZm9ybUNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgaWQ9XCJsb2dpbkZvcm1Db250YWluZXJcIj5cclxuICAgIDxkaXY+XHJcbiAgICAgICAgPHAgc3R5bGU9XCJtYXJnaW4tYm90dG9tOjMwcHg7IGZvbnQtc2l6ZTo1MHB4XCI+UGxlYXNlIGVudGVyIHlvdXIgbG9naW4gY3JlZGVudGlhbHM8L3A+XHJcbiAgICAgICAgPGZvcm0gaWQ9XCJsb2dpbkZvcm1cIiAobmdTdWJtaXQpPVwib25TdWJtaXQoKVwiICNmb3JtPVwibmdGb3JtXCI+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaW5uZXItYWRkb24gbGVmdC1hZGRvblwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ1c2VyaWRcIiBjbGFzcz1cImZvcm0tY29udHJvbFwiIFsobmdNb2RlbCldPVwidXNlci51c2VybmFtZVwiIG5hbWU9XCJ1c2VybmFtZVwiIGlkPVwiSW5wdXRVc2VySWQxXCIgcGxhY2Vob2xkZXI9XCJVc2VybmFtZVwiIHJlcXVpcmVkPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4gICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaW5uZXItYWRkb24gbGVmdC1hZGRvblwiICBpZD1cInBhc3N3b3JkXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cInBhc3N3b3JkXCIgY2xhc3M9XCJmb3JtLWNvbnRyb2xcIiBbKG5nTW9kZWwpXT1cInVzZXIucGFzc3dvcmRcIiBuYW1lPVwicGFzc3dvcmRcIiBpZD1cIklucHV0UGFzc3dvcmQxXCIgcGxhY2Vob2xkZXI9XCJQYXNzd29yZFwiIHJlcXVpcmVkPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4gICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPVwic3VibWl0XCIgY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiBbZGlzYWJsZWRdID1cIiFmb3JtLnZhbGlkXCIgaWQ9XCJidG5sb2dpblwiPiBMb2cgaW48L2J1dHRvbj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz1cImJ0biBidG4tcHJpbWFyeVwiW3JvdXRlckxpbmtdPVwiWycuLi9zaWdudXAnXVwiIGlkPVwiYnRubG9naW5cIj5TaWdudXA8L2J1dHRvbj5cclxuICAgICAgICA8L2Zvcm0+XHJcbiAgICA8L2Rpdj5cclxuPC9kaXY+ICBcclxuXHJcbiIsIjxhcHAtbG9naW5mb3JtPjwvYXBwLWxvZ2luZm9ybT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUFBLGdCQUE2QiwyQ0FDekI7TUFBQTtNQUFBLDRDQUFLO01BQ0Q7VUFBQTtNQUE4Qyx3RUFBdUM7aUJBQUEsZ0NBQ3JGO1VBQUE7Y0FBQTtrQkFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO1lBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFxQjtjQUFBO2NBQUE7WUFBQTtZQUFyQjtVQUFBLHVDQUFBO1VBQUEsb0NBQUE7VUFBQSw4RUFBQTtVQUFBLG9FQUFBO1VBQUE7VUFBQSxlQUE0RCx1REFDcEQ7aUJBQUE7Y0FBQTtNQUF3QiwrREFDaEI7VUFBQTtVQUFBO01BQW9DLG1FQUNoQztVQUFBO2NBQUE7a0JBQUE7Y0FBQTtjQUFBO2NBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQTBDO2NBQUE7Y0FBQTtZQUFBO1lBQTFDO1VBQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFBO1VBQUEsZ0RBQUE7VUFBQTtZQUFBO1VBQUE7VUFBQTtZQUFBO1VBQUEsb0NBQUE7NkJBQUE7VUFBQSxxRUFBQTtVQUFBLDhEQUFBO1VBQUEsaUVBQXdJO2lCQUFBLGdEQUN0STtVQUFBLDRDQUNKO1VBQUEsNkJBQ047VUFBQTtVQUFBLDhCQUF3QjtNQUNwQjtVQUFBO1VBQUEsZ0JBQW1EO01BQy9DO1VBQUE7Y0FBQTtVQUFBO2NBQUE7VUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO1VBQUE7VUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBNEM7VUFBQTtVQUFBO1FBQUE7UUFBNUM7TUFBQSx1Q0FBQTtVQUFBO1VBQUEsc0JBQUE7VUFBQSxnREFBQTtVQUFBO1lBQUE7VUFBQTtVQUFBO1lBQUE7VUFBQSxvQ0FBQTs2QkFBQTtVQUFBLHFFQUFBO1VBQUEsOERBQUE7VUFBQSxpRUFBNEk7aUJBQUEsZ0RBQzFJO1VBQUEsNENBQ0o7VUFBQSxxQkFDZDtVQUFBO2NBQUEsOERBQXNGO2lCQUFBLDZCQUFnQjtNQUN0RztVQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO01BQUEsdUNBQUE7VUFBQTtVQUFBLG9EQUErQixJQUEyQztVQUFBLGFBQWUsK0NBQ3RGO1VBQUEsYUFDTCx1Q0FDSjtVQUFBOztJQVpxSjtJQUEvSCxZQUErSCxVQUEvSDtJQUFzRTtJQUE1QjtJQUExQyxZQUFzRSxXQUE1QixVQUExQztJQUttSTtJQUFuSSxZQUFtSSxVQUFuSTtJQUF3RTtJQUE1QjtJQUE1QyxZQUF3RSxXQUE1QixVQUE1QztJQUllO0lBQS9CLFlBQStCLFVBQS9COztJQVpKO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsV0FBQSxxRUFBQTtJQUdvQjtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsWUFBQSxVQUFBO1FBQUEsVUFBQTtJQUtBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQSxZQUFBLFdBQUE7UUFBQSxxQkFBQTtJQUc4QjtJQUE5QyxZQUE4QyxVQUE5Qzs7OztvQkNkWjtNQUFBO21DQUFBLFVBQUE7TUFBQTs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luZm9ybS9sb2dpbmZvcm0uY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbmZvcm0vbG9naW5mb3JtLmNvbXBvbmVudC50cyIsIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbmZvcm0vbG9naW5mb3JtLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luZm9ybS9sb2dpbmZvcm0uY29tcG9uZW50LnRzLkxvZ2luZm9ybUNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxkaXYgaWQ9XCJsb2dpbkZvcm1Db250YWluZXJcIj5cclxuICAgIDxkaXY+XHJcbiAgICAgICAgPHAgc3R5bGU9XCJtYXJnaW4tYm90dG9tOjMwcHg7IGZvbnQtc2l6ZTo1MHB4XCI+UGxlYXNlIGVudGVyIHlvdXIgbG9naW4gY3JlZGVudGlhbHM8L3A+XHJcbiAgICAgICAgPGZvcm0gaWQ9XCJsb2dpbkZvcm1cIiAobmdTdWJtaXQpPVwib25TdWJtaXQoKVwiICNmb3JtPVwibmdGb3JtXCI+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaW5uZXItYWRkb24gbGVmdC1hZGRvblwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ1c2VyaWRcIiBjbGFzcz1cImZvcm0tY29udHJvbFwiIFsobmdNb2RlbCldPVwidXNlci51c2VybmFtZVwiIG5hbWU9XCJ1c2VybmFtZVwiIGlkPVwiSW5wdXRVc2VySWQxXCIgcGxhY2Vob2xkZXI9XCJVc2VybmFtZVwiIHJlcXVpcmVkPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZm9ybS1ncm91cFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiaW5uZXItYWRkb24gbGVmdC1hZGRvblwiICBpZD1cInBhc3N3b3JkXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cInBhc3N3b3JkXCIgY2xhc3M9XCJmb3JtLWNvbnRyb2xcIiBbKG5nTW9kZWwpXT1cInVzZXIucGFzc3dvcmRcIiBuYW1lPVwicGFzc3dvcmRcIiBpZD1cIklucHV0UGFzc3dvcmQxXCIgcGxhY2Vob2xkZXI9XCJQYXNzd29yZFwiIHJlcXVpcmVkPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPVwic3VibWl0XCIgY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIiBbZGlzYWJsZWRdID1cIiFmb3JtLnZhbGlkXCIgaWQ9XCJidG5sb2dpblwiPiBMb2cgaW48L2J1dHRvbj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz1cImJ0biBidG4tcHJpbWFyeVwiW3JvdXRlckxpbmtdPVwiWycuLi9zaWdudXAnXVwiIGlkPVwiYnRuUmVnaXN0ZXJcIj5TaWdudXA8L2J1dHRvbj5cclxuICAgICAgICAgIDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXByaW1hcnlcIltyb3V0ZXJMaW5rXT1cIlsnLi4vY2hhbmdlJ11cIiBpZD1cImJ0bkNoYW5nZVwiPkNoYW5nZSBQYXNzd29yZDwvYnV0dG9uPlxyXG4gICAgICAgIDwvZm9ybT5cclxuICAgIDwvZGl2PlxyXG48L2Rpdj5cclxuXHJcbiIsIjxhcHAtbG9naW5mb3JtPjwvYXBwLWxvZ2luZm9ybT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUFBLGdCQUE2QiwyQ0FDekI7TUFBQTtNQUFBLDRDQUFLO01BQ0Q7VUFBQTtNQUE4Qyx3RUFBdUM7aUJBQUEsZ0NBQ3JGO1VBQUE7Y0FBQTtrQkFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO1lBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFxQjtjQUFBO2NBQUE7WUFBQTtZQUFyQjtVQUFBLHVDQUFBO1VBQUEsb0NBQUE7VUFBQSw4RUFBQTtVQUFBLG9FQUFBO1VBQUE7VUFBQSxlQUE0RCx1REFDcEQ7aUJBQUE7Y0FBQTtNQUF3QiwrREFDaEI7VUFBQTtVQUFBO01BQW9DLG1FQUNoQztVQUFBO2NBQUE7a0JBQUE7Y0FBQTtjQUFBO2NBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQUE7Y0FBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQTBDO2NBQUE7Y0FBQTtZQUFBO1lBQTFDO1VBQUEsdUNBQUE7VUFBQTtVQUFBLHNCQUFBO1VBQUEsZ0RBQUE7VUFBQTtZQUFBO1VBQUE7VUFBQTtZQUFBO1VBQUEsb0NBQUE7NkJBQUE7VUFBQSxxRUFBQTtVQUFBLDhEQUFBO1VBQUEsaUVBQXdJO2lCQUFBLGdEQUN0STtVQUFBLDZCQUNKO01BQ047VUFBQTtNQUF3QiwrREFDcEI7VUFBQTtjQUFBO1VBQUEsZ0JBQW1EO01BQy9DO1VBQUE7Y0FBQTtVQUFBO2NBQUE7VUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBQTtVQUFBO1VBQUE7UUFBQTtRQUFBO1VBQUE7VUFBQTtRQUFBO1FBQUE7VUFBQTtVQUFBO1FBQUE7UUFBNEM7VUFBQTtVQUFBO1FBQUE7UUFBNUM7TUFBQSx1Q0FBQTtVQUFBO1VBQUEsc0JBQUE7VUFBQSxnREFBQTtVQUFBO1lBQUE7VUFBQTtVQUFBO1lBQUE7VUFBQSxvQ0FBQTs2QkFBQTtVQUFBLHFFQUFBO1VBQUEsOERBQUE7VUFBQSxpRUFBNEk7aUJBQUEsZ0RBQzFJO1VBQUEsNkJBQ0o7TUFDZDtVQUFBO1VBQUEsOEJBQXNGO01BQWdCLG1EQUN0RztVQUFBO1VBQUE7WUFBQTtZQUFBO2NBQUE7Y0FBQTtZQUFBO1lBQUE7VUFBQSx1Q0FBQTtVQUFBO1VBQUEsb0RBQStCLElBQThDO1VBQUEsYUFBZSxpREFDOUY7VUFBQTtjQUFBO1lBQUE7WUFBQTtjQUFBO2NBQUE7WUFBQTtZQUFBO1VBQUEsdUNBQUE7VUFBQTtVQUFBLG9EQUErQixJQUE0QztVQUFBLHNCQUF3QiwrQ0FDOUY7aUJBQUEsNEJBQ0w7TUFDSjs7SUFicUo7SUFBL0gsWUFBK0gsVUFBL0g7SUFBc0U7SUFBNUI7SUFBMUMsWUFBc0UsV0FBNUIsVUFBMUM7SUFLbUk7SUFBbkksWUFBbUksVUFBbkk7SUFBd0U7SUFBNUI7SUFBNUMsWUFBd0UsV0FBNUIsVUFBNUM7SUFJZTtJQUEvQixZQUErQixVQUEvQjtJQUM2QjtJQUEvQixZQUErQixVQUEvQjs7SUFiRjtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBLFdBQUEscUVBQUE7SUFHb0I7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBLFlBQUEsVUFBQTtRQUFBLFVBQUE7SUFLQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUE7SUFBQTtJQUFBO0lBQUEsWUFBQSxXQUFBO1FBQUEscUJBQUE7SUFHOEI7SUFBOUMsWUFBOEMsVUFBOUM7Ozs7b0JDZFo7TUFBQTttQ0FBQSxVQUFBO01BQUE7OzsifQ==

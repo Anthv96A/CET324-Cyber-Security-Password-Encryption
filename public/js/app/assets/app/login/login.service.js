@@ -14,6 +14,7 @@ import { Observable } from "rxjs";
 import { ErrorService } from '../validation/errors/error.service';
 import { SuccessService } from '../validation/success/success.service';
 var UserService = /** @class */ (function () {
+    //   private url = 'http://localhost:3000/';
     function UserService(http, errorService, successService) {
         var _this = this;
         this.http = http;
@@ -34,14 +35,20 @@ var UserService = /** @class */ (function () {
     UserService.prototype.signup = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.url + 'user/', body, { headers: headers })
+        return this.http.post(this.url + "user/", body, { headers: headers })
             .map(this.extractData).catch(this.catchException);
     };
     UserService.prototype.signin = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.url + 'user/signin', body, { headers: headers })
+        return this.http.post(this.url + "user/signin", body, { headers: headers })
             .map(function (data) { return data.json(); }).catch(this.catchException);
+    };
+    UserService.prototype.changePassword = function (user) {
+        var body = this.convert(user);
+        return this.http.put(this.url + "user/" + user.username, body)
+            .map(this.extractData)
+            .catch(this.catchException);
     };
     UserService.prototype.logout = function () {
         localStorage.clear();
@@ -49,6 +56,11 @@ var UserService = /** @class */ (function () {
     UserService.prototype.isLoggedIn = function () {
         return localStorage.getItem('token') !== null;
     };
+    UserService.prototype.convert = function (body) {
+        var copy = Object.assign({}, body);
+        return copy;
+    };
+    ;
     UserService = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [Http,

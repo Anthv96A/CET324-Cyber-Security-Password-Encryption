@@ -11,23 +11,27 @@ import * as i1 from './login-routing.module';
 import * as i2 from './login.component.ngfactory';
 import * as i3 from './signup/signup.component.ngfactory';
 import * as i4 from './loginform/loginform.component.ngfactory';
-import * as i5 from '@angular/common';
-import * as i6 from '@angular/router';
-import * as i7 from './login.component';
-import * as i8 from './signup/signup.component';
-import * as i9 from './loginform/loginform.component';
+import * as i5 from './change-password/change-password.component.ngfactory';
+import * as i6 from '@angular/common';
+import * as i7 from '@angular/router';
+import * as i8 from './login.component';
+import * as i9 from './signup/signup.component';
+import * as i10 from './loginform/loginform.component';
+import * as i11 from './change-password/change-password.component';
 export const LoginRoutingModuleNgFactory:i0.NgModuleFactory<i1.LoginRoutingModule> = i0.ɵcmf(i1.LoginRoutingModule,
     ([] as any[]),(_l:any) => {
       return i0.ɵmod([i0.ɵmpd(512,i0.ComponentFactoryResolver,i0.ɵCodegenComponentFactoryResolver,
-          [[8,[i2.LoginComponentNgFactory,i3.SignUpComponentNgFactory,i4.LoginformComponentNgFactory]],
-              [3,i0.ComponentFactoryResolver],i0.NgModuleRef]),i0.ɵmpd(4608,i5.NgLocalization,
-          i5.NgLocaleLocalization,[i0.LOCALE_ID]),i0.ɵmpd(512,i5.CommonModule,i5.CommonModule,
-          ([] as any[])),i0.ɵmpd(512,i6.RouterModule,i6.RouterModule,[[2,i6.ɵa],[2,
-          i6.Router]]),i0.ɵmpd(512,i1.LoginRoutingModule,i1.LoginRoutingModule,([] as any[])),
-          i0.ɵmpd(1024,i6.ROUTES,() => {
-            return [[{path:'',redirectTo:'/login/signin',pathMatch:'full'},{path:'login',
-                component:i7.LoginComponent,children:[{path:'signup',component:i8.SignUpComponent},
-                    {path:'signin',component:i9.LoginformComponent}]}]];
-          },([] as any[]))]);
+          [[8,[i2.LoginComponentNgFactory,i3.SignUpComponentNgFactory,i4.LoginformComponentNgFactory,
+              i5.ChangePasswordComponentNgFactory]],[3,i0.ComponentFactoryResolver],
+              i0.NgModuleRef]),i0.ɵmpd(4608,i6.NgLocalization,i6.NgLocaleLocalization,
+          [i0.LOCALE_ID]),i0.ɵmpd(512,i6.CommonModule,i6.CommonModule,([] as any[])),
+          i0.ɵmpd(512,i7.RouterModule,i7.RouterModule,[[2,i7.ɵa],[2,i7.Router]]),i0.ɵmpd(512,
+              i1.LoginRoutingModule,i1.LoginRoutingModule,([] as any[])),i0.ɵmpd(1024,
+              i7.ROUTES,() => {
+                return [[{path:'',redirectTo:'/login/signin',pathMatch:'full'},{path:'login',
+                    component:i8.LoginComponent,children:[{path:'signup',component:i9.SignUpComponent},
+                        {path:'signin',component:i10.LoginformComponent},{path:'change',
+                            component:i11.ChangePasswordComponent}]}]];
+              },([] as any[]))]);
     });
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luLXJvdXRpbmcubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbi1yb3V0aW5nLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvYW50aG8vQWR2YW5jZWQgQ3liZXIgU2VjdXJpdHkvQXNzaWdubWVudCB0d28vQXNzaWdubWVudC9hc3NldHMvYXBwL2xvZ2luL2xvZ2luLXJvdXRpbmcubW9kdWxlLm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0M6L1VzZXJzL2FudGhvL0FkdmFuY2VkIEN5YmVyIFNlY3VyaXR5L0Fzc2lnbm1lbnQgdHdvL0Fzc2lnbm1lbnQvYXNzZXRzL2FwcC9sb2dpbi9sb2dpbi1yb3V0aW5nLm1vZHVsZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIgIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

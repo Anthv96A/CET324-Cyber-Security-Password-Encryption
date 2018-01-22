@@ -242,6 +242,6 @@ export function View_SignUpComponent_0(_l) {
 }
 export function View_SignUpComponent_Host_0(_l) {
     return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'app-signup', [], null, null, null, View_SignUpComponent_0, RenderType_SignUpComponent)),
-        i1.ɵdid(49152, null, 0, i2.SignUpComponent, [i8.UserService], null, null)], null, null);
+        i1.ɵdid(180224, null, 0, i2.SignUpComponent, [i8.UserService, i7.Router], null, null)], null, null);
 }
 export var SignUpComponentNgFactory = i1.ɵccf('app-signup', i2.SignUpComponent, View_SignUpComponent_Host_0, {}, {}, []);

@@ -1,4 +1,4 @@
-/* Login Form 
+/* Login Form
 -------------------------------------------------- */
 #password {
     width: auto;
@@ -15,20 +15,20 @@
     padding-left: 40px;
 }
 
-#InputUserId1 { 
+#InputUserId1 {
     margin-bottom: 20px;
     background: url(/img/User_font_awesome.png) no-repeat;
     color: white;
 }
 
-#InputPassword1 { 
+#InputPassword1 {
     margin-bottom: 20px;
     background: url(/img/locked_1.png) no-repeat;
     color: white;
 }
 
 #btnlogin {
-    width:134px;
+    width:120px;
     height: 50px;
     border: none;
     border-radius: 0px;
@@ -36,6 +36,28 @@
     background-color: #0f3455;
     font-size:12pt;
 }
+
+#btnRegister{
+  width:120px;
+  height: 50px;
+  border: none;
+  border-radius: 0px;
+  background-image: none;
+  background-color: #0f3455;
+  font-size:12pt;
+}
+
+#btnChange{
+  width:154px;
+  height: 50px;
+  border: none;
+  border-radius: 0px;
+  background-image: none;
+  background-color: #0f3455;
+  font-size:12pt;
+}
+
+
 
 #btnViewPassword {
     background-color: #001b34;
@@ -62,7 +84,7 @@
     margin-top:20px;
     font-size:10pt;
     color: rgba(255, 255, 255, 0.7);
-   
+
 }
 
 #loginFormContainer {

@@ -14,15 +14,20 @@ var LoginformComponent = /** @class */ (function () {
     function LoginformComponent(userService, router) {
         this.userService = userService;
         this.router = router;
-        this.user = { username: "", password: "" };
+        this.user = {};
     }
     LoginformComponent.prototype.onSubmit = function () {
         var _this = this;
-        this.userService.signin(this.user).subscribe(function (data) {
+        this.subscription$ = this.userService.signin(this.user).subscribe(function (data) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.userId);
             _this.router.navigateByUrl('/home');
         }, function (error) { return console.error(error); });
+    };
+    LoginformComponent.prototype.ngOnDestroy = function () {
+        if (this.subscription$ !== undefined) {
+            this.subscription$.unsubscribe();
+        }
     };
     LoginformComponent = __decorate([
         Component({

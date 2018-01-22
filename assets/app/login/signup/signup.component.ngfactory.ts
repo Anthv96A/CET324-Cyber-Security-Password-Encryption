@@ -316,8 +316,8 @@ export function View_SignUpComponent_0(_l:any):i1.ɵViewDefinition {
 export function View_SignUpComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'app-signup',([] as any[]),
       (null as any),(null as any),(null as any),View_SignUpComponent_0,RenderType_SignUpComponent)),
-      i1.ɵdid(49152,(null as any),0,i2.SignUpComponent,[i8.UserService],(null as any),
-          (null as any))],(null as any),(null as any));
+      i1.ɵdid(180224,(null as any),0,i2.SignUpComponent,[i8.UserService,i7.Router],
+          (null as any),(null as any))],(null as any),(null as any));
 }
 export const SignUpComponentNgFactory:i1.ComponentFactory<i2.SignUpComponent> = i1.ɵccf('app-signup',
     i2.SignUpComponent,View_SignUpComponent_Host_0,{},{},([] as any[]));

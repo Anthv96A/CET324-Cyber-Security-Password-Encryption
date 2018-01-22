@@ -18,35 +18,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { UserService } from '../login.service';
 import { SignUpAndUpdatePassword } from '../SignandUpdatePassword';
+import { UserService } from '../login.service';
 import { Router } from '@angular/router';
-var SignUpComponent = /** @class */ (function (_super) {
-    __extends(SignUpComponent, _super);
-    function SignUpComponent(userService, router) {
+var ChangePasswordComponent = /** @class */ (function (_super) {
+    __extends(ChangePasswordComponent, _super);
+    function ChangePasswordComponent(userService, router) {
         return _super.call(this, userService, router) || this;
     }
-    SignUpComponent.prototype.onSubmit = function () {
+    ChangePasswordComponent.prototype.onSubmit = function () {
         var _this = this;
         this.extractValues(this.user.password);
-        this.userService.signup(this.user).subscribe(function (data) {
+        this.sub$ = this.userService.changePassword(this.user).subscribe(function (data) {
             console.log(data);
             _this.router.navigate(['/login', 'signin']);
         });
     };
-    SignUpComponent.prototype.ngOnDestroy = function () {
+    ChangePasswordComponent.prototype.ngOnDestroy = function () {
         if (this.sub$ !== undefined) {
             this.sub$.unsubscribe();
         }
     };
-    SignUpComponent = __decorate([
+    ChangePasswordComponent = __decorate([
         Component({
-            selector: 'app-signup',
-            templateUrl: './signup.component.html',
-            styleUrls: ['./signup.component.css']
+            selector: 'app-change-password',
+            templateUrl: './change-password.component.html',
+            styleUrls: ['./change-password.component.css']
         }),
         __metadata("design:paramtypes", [UserService, Router])
-    ], SignUpComponent);
-    return SignUpComponent;
+    ], ChangePasswordComponent);
+    return ChangePasswordComponent;
 }(SignUpAndUpdatePassword));
-export { SignUpComponent };
+export { ChangePasswordComponent };

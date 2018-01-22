@@ -14,6 +14,8 @@ export class UserService{
     
     private url = 'https://cet324-deployment.herokuapp.com/';
 
+ //   private url = 'http://localhost:3000/';
+
     constructor(
         private http: Http,
         private errorService: ErrorService,
@@ -23,15 +25,22 @@ export class UserService{
     signup(user){
         const body  = JSON.stringify(user)
         const headers = new Headers({'Content-Type':'application/json'});
-        return this.http.post(this.url +'user/', body, {headers: headers})
+        return this.http.post(`${this.url}user/`, body, {headers: headers})
             .map(this.extractData).catch(this.catchException);
     }
 
     signin(user){
         const body  = JSON.stringify(user)
         const headers = new Headers({'Content-Type':'application/json'});
-        return this.http.post(this.url +'user/signin', body, {headers: headers})
+        return this.http.post(`${this.url}user/signin`, body, {headers: headers})
              .map((data: Response) =>{ return data.json() }).catch(this.catchException);
+    }
+
+    changePassword(user){
+        const body = this.convert(user);
+        return this.http.put(`${this.url}user/${user.username}`, body)
+            .map(this.extractData)
+            .catch(this.catchException);
     }
 
     
@@ -42,6 +51,11 @@ export class UserService{
      isLoggedIn(){
           return localStorage.getItem('token') !== null;
      }
+
+     private convert(body) {
+        const copy = Object.assign({}, body);
+        return copy;
+    };
 
 
     private extractData = (res:Response) =>{

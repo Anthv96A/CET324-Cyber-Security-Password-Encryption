@@ -14,11 +14,11 @@ var styles_LoginformComponent = [i0.styles];
 export var RenderType_LoginformComponent = i1.ɵcrt({ encapsulation: 0,
     styles: styles_LoginformComponent, data: {} });
 export function View_LoginformComponent_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 52, 'div', [['id',
-                'loginFormContainer']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 49, 'div', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])),
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 57, 'div', [['id',
+                'loginFormContainer']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 54, 'div', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n        '])),
         (_l()(), i1.ɵeld(0, null, null, 1, 'p', [['style', 'margin-bottom:30px; font-size:50px']], null, null, null, null, null)),
         (_l()(), i1.ɵted(null, ['Please enter your login credentials'])), (_l()(),
-            i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 43, 'form', [['id', 'loginForm'], ['novalidate', '']], [[2, 'ng-untouched', null],
+            i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵeld(0, null, null, 48, 'form', [['id', 'loginForm'], ['novalidate', '']], [[2, 'ng-untouched', null],
             [2, 'ng-touched', null], [2, 'ng-pristine', null], [2, 'ng-dirty',
                 null], [2, 'ng-valid', null], [2, 'ng-invalid', null],
             [2, 'ng-pending', null]], [[null, 'ngSubmit'], [null,
@@ -79,8 +79,9 @@ export function View_LoginformComponent_0(_l) {
             return [p0_0];
         }, [i3.DefaultValueAccessor]), i1.ɵdid(671744, null, 0, i3.NgModel, [[2,
                 i3.ControlContainer], [2, i3.NG_VALIDATORS], [8, null], [2, i3.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i1.ɵprd(2048, null, i3.NgControl, null, [i3.NgModel]), i1.ɵdid(16384, null, 0, i3.NgControlStatus, [i3.NgControl], null, null), (_l()(),
-            i1.ɵted(null, ['\n                        '])), (_l()(), i1.ɵted(null, ['               \n                    '])), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵeld(0, null, null, 13, 'div', [['class', 'form-group']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n                        '])),
-        (_l()(), i1.ɵeld(0, null, null, 10, 'div', [['class', 'inner-addon left-addon'],
+            i1.ɵted(null, ['\n                        '])), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵted(null, ['\n                    '])),
+        (_l()(), i1.ɵeld(0, null, null, 13, 'div', [['class', 'form-group']], null, null, null, null, null)),
+        (_l()(), i1.ɵted(null, ['\n                        '])), (_l()(), i1.ɵeld(0, null, null, 10, 'div', [['class', 'inner-addon left-addon'],
             ['id', 'password']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n                            '])),
         (_l()(), i1.ɵeld(0, null, null, 7, 'input', [['class', 'form-control'],
             ['id', 'InputPassword1'], ['name', 'password'], ['placeholder', 'Password'], ['required',
@@ -119,18 +120,27 @@ export function View_LoginformComponent_0(_l) {
             return [p0_0];
         }, [i3.DefaultValueAccessor]), i1.ɵdid(671744, null, 0, i3.NgModel, [[2,
                 i3.ControlContainer], [2, i3.NG_VALIDATORS], [8, null], [2, i3.NG_VALUE_ACCESSOR]], { name: [0, 'name'], model: [1, 'model'] }, { update: 'ngModelChange' }), i1.ɵprd(2048, null, i3.NgControl, null, [i3.NgModel]), i1.ɵdid(16384, null, 0, i3.NgControlStatus, [i3.NgControl], null, null), (_l()(),
-            i1.ɵted(null, ['\n                        '])), (_l()(), i1.ɵted(null, ['               \n                    '])), (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'], ['id', 'btnlogin'], ['type', 'submit']], [[8, 'disabled',
-                0]], null, null, null, null)), (_l()(),
-            i1.ɵted(null, [' Log in'])), (_l()(), i1.ɵted(null, ['\n            '])),
-        (_l()(), i1.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-primary'],
-            ['id', 'btnlogin']], null, [[null, 'click']], function (_v, en, $event) {
+            i1.ɵted(null, ['\n                        '])), (_l()(), i1.ɵted(null, ['\n                    '])), (_l()(), i1.ɵted(null, ['\n            '])),
+        (_l()(), i1.ɵeld(0, null, null, 1, 'button', [['class', 'btn btn-primary'],
+            ['id', 'btnlogin'], ['type', 'submit']], [[8, 'disabled', 0]], null, null, null, null)), (_l()(), i1.ɵted(null, [' Log in'])),
+        (_l()(), i1.ɵted(null, ['\n            '])), (_l()(), i1.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-primary'], ['id', 'btnRegister']], null, [[null, 'click']], function (_v, en, $event) {
             var ad = true;
             if (('click' === en)) {
                 var pd_0 = (i1.ɵnov(_v, 47).onClick() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)), i1.ɵdid(16384, null, 0, i4.RouterLink, [i4.Router, i4.ActivatedRoute, [8, null], i1.Renderer2, i1.ElementRef], { routerLink: [0, 'routerLink'] }, null), i1.ɵpad(1), (_l()(), i1.ɵted(null, ['Signup'])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n'])), (_l()(), i1.ɵted(null, ['  \n\n']))], function (_ck, _v) {
+        }, null, null)), i1.ɵdid(16384, null, 0, i4.RouterLink, [i4.Router, i4.ActivatedRoute, [8, null], i1.Renderer2, i1.ElementRef], { routerLink: [0, 'routerLink'] }, null), i1.ɵpad(1), (_l()(), i1.ɵted(null, ['Signup'])), (_l()(), i1.ɵted(null, ['\n          '])), (_l()(), i1.ɵeld(0, null, null, 3, 'button', [['class', 'btn btn-primary'], ['id',
+                'btnChange']], null, [[null, 'click']], function (_v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (i1.ɵnov(_v, 52).onClick() !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)), i1.ɵdid(16384, null, 0, i4.RouterLink, [i4.Router, i4.ActivatedRoute, [8, null], i1.Renderer2, i1.ElementRef], { routerLink: [0, 'routerLink'] }, null), i1.ɵpad(1), (_l()(), i1.ɵted(null, ['Change Password'])), (_l()(), i1.ɵted(null, ['\n        '])), (_l()(),
+            i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵted(null, ['\n'])),
+        (_l()(), i1.ɵted(null, ['\n\n']))], function (_ck, _v) {
         var _co = _v.component;
         var currVal_15 = '';
         _ck(_v, 19, 0, currVal_15);
@@ -144,6 +154,8 @@ export function View_LoginformComponent_0(_l) {
         _ck(_v, 37, 0, currVal_27, currVal_28);
         var currVal_30 = _ck(_v, 48, 0, '../signup');
         _ck(_v, 47, 0, currVal_30);
+        var currVal_31 = _ck(_v, 53, 0, '../change');
+        _ck(_v, 52, 0, currVal_31);
     }, function (_ck, _v) {
         var currVal_0 = i1.ɵnov(_v, 11).ngClassUntouched;
         var currVal_1 = i1.ɵnov(_v, 11).ngClassTouched;
@@ -176,6 +188,6 @@ export function View_LoginformComponent_0(_l) {
     });
 }
 export function View_LoginformComponent_Host_0(_l) {
-    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'app-loginform', [], null, null, null, View_LoginformComponent_0, RenderType_LoginformComponent)), i1.ɵdid(49152, null, 0, i2.LoginformComponent, [i5.UserService, i4.Router], null, null)], null, null);
+    return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, null, null, 1, 'app-loginform', [], null, null, null, View_LoginformComponent_0, RenderType_LoginformComponent)), i1.ɵdid(180224, null, 0, i2.LoginformComponent, [i5.UserService, i4.Router], null, null)], null, null);
 }
 export var LoginformComponentNgFactory = i1.ɵccf('app-loginform', i2.LoginformComponent, View_LoginformComponent_Host_0, {}, {}, []);

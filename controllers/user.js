@@ -8,7 +8,7 @@ var RateLimit = require('express-rate-limit');
 
 var limiter = new RateLimit({
     windowMs: 1 * 60 * 1000, // 1 minutes
-    max: 2, // 2 for demo purposes
+    max: 3, // 3 for demo purposes
     delayMs: 0,
     message: "Too many requests to this server, blocked from this IP"
 });
@@ -16,6 +16,8 @@ var limiter = new RateLimit({
 
 
 router.put('/:username', function(req, res, next){
+
+    var oneWeek = new Date()
 
     User.findOne({username: req.body.username}, function(err, user){
         if(err){
@@ -64,6 +66,7 @@ router.put('/:username', function(req, res, next){
        user.specialChar = req.body.specialChars;
        user.numericValues = req.body.numericValues;
        user.passwordLength = req.body.passwordLength;
+       user.changeDate =  oneWeek.setDate(oneWeek.getDate() + 7) // Another week to change
 
 
        user.save(function(err, updated){
@@ -82,6 +85,8 @@ router.put('/:username', function(req, res, next){
 });
 
 router.post('/', function (req, res, next) {
+    var oneWeek = new Date()
+
     var user = new User({
         password:   bcrypt.hashSync(req.body.password,10), // The 10 is the strength of the algorithm
         oldPassword:  bcrypt.hashSync(req.body.password,10),
@@ -90,7 +95,8 @@ router.post('/', function (req, res, next) {
         uppercase: req.body.uppercase,
         specialChars: req.body.specialChars,
         numericValues: req.body.numericValues,
-        passwordLength: req.body.passwordLength
+        passwordLength: req.body.passwordLength,
+        changeDate: oneWeek.setDate(oneWeek.getDate() + 1)  // Change password 1 days from signing up for demo purposes
     });
 
     user.save(function(err,result){
@@ -127,6 +133,7 @@ router.get('/:id', function(req,res,next){
 router.post('/signin', limiter ,function(req, res, next){
 
     User.findOne({username: req.body.username}, function(err, user){
+        var today = new Date();
 
             if(err){
                 return res.status(500).json({
@@ -146,6 +153,13 @@ router.post('/signin', limiter ,function(req, res, next){
                     error: {message: 'Invalid login credentials' }
                 });
             };
+
+            if(today >= user.changeDate){
+                return res.status(401).json({
+                    title: 'Password expired',
+                    error: {message: 'Your password has expired, please change your password'}
+                })
+            }
             if(!bcrypt.compareSync(req.body.password, user.password)){
                  return res.status(500).json({
                     title: 'Login failed' ,

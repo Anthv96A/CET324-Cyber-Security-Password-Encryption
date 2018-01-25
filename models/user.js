@@ -10,7 +10,8 @@ var schema = new Schema({
     uppercase: {type: Number},
     specialChars: {type: Number},
     numericValues: {type: Number},
-    passwordLength: {type: Number}
+    passwordLength: {type: Number},
+    changeDate: {type: Date}
 });
 
 schema.plugin(mongooseUniqueValidator);
